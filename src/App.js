@@ -11,21 +11,28 @@ import ProductDetail from "./pages/ProductDetail/ProductDetail";
 import NotFound from "./pages/404"
 import Cart from "./pages/Cart/Cart";
 
+import ReduxStatePage from "./pages/ReduxStatePage";
+
+import ReduxExample from "./components/redux-example";
 
 function App() {
     return (
         <>
             <Header/>
+            <ReduxExample/>
             <Routes>
                 <Route path='*' element={<NotFound />} />
                 <Route path="/" element={<Index />} />
                 <Route path="product-listing" element={<ProductListing />} />
                 <Route path="product-detail" element={<ProductDetail />} />
                 <Route path="cart" element={<Cart/>} />
+                <Route path="redux-state-page" element={<ReduxStatePage/>} />
             </Routes>
             <Footer/>
         </>
     );
 }
+
+
 
 export default App;

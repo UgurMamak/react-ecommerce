@@ -5,7 +5,15 @@ import { connect } from "react-redux";
 import * as exampleActions from "../../redux/example/actions";
 
 class CounterClassComp extends Component {
+  test = () => {
+    const ugur = "5";
+    const item = {};
+
+    console.log(ugur, item);
+  };
+
   render() {
+    const item = new Object();
     return (
       <div className="container">
         <h1>Class component</h1>

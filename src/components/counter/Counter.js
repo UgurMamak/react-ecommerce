@@ -1,43 +1,18 @@
-import React, {Component} from 'react';
-import {connect} from "react-redux";
+import React from "react";
 
-class Counter extends Component {
+class Counter extends React.Component {
+  constructor(props) {
+    super(props);
 
-    componentDidMount() {
-        console.log("CounterProp=",this.props);
-    }
+    this.state = {
+      hello: "ugur",
+    };
+  }
 
-
-    render() {
-        return (
-            <div>
-                <h1>{this.props.counter.count}</h1>
-                <button onClick={()=>this.props.increment()} >+</button>
-                <button onClick={()=>this.props.decrement()} >-</button>
-
-            </div>
-        );
-    }
+  render() {
+    const { hello } = this.state;
+    return <div>{hello}</div>;
+  }
 }
 
-
-const mapStateToProps = (state, ownProps) => {
-    // ... computed data from state and optionally ownProps
-
-    return { counter: state.CounterReducer};
-
-
-}
-
-const mapDispatchToProps = (dispatch) => {
-    return {
-        increment: () => dispatch({ type: 'counter/increment' }),
-        decrement: () => dispatch({ type: 'counter/decrement' }),
-    }
-}
-
-
-
-
-
-export default connect(mapStateToProps, mapDispatchToProps)(Counter)
+export default Counter;

@@ -1,9 +1,8 @@
-import { applyMiddleware, createStore } from "redux";
-import { combineReducers } from "redux";
+import { applyMiddleware, createStore, combineReducers } from "redux";
 import { composeWithDevTools } from "redux-devtools-extension";
 import thunk from "redux-thunk";
 
-//reducer list
+// reducer list
 import ExampleReducer from "./example/reducers";
 
 const rootReducer = combineReducers({
@@ -20,7 +19,9 @@ const composeEnhancers = composeWithDevTools({});
 //    )
 // );
 
-export const store = createStore(
+const store = createStore(
   rootReducer,
   composeEnhancers(applyMiddleware(thunk))
 );
+
+export default store;

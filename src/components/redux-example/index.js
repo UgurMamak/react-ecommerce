@@ -1,25 +1,27 @@
-import React, {Component} from 'react';
-
+import React from "react";
 
 import CounterFuncComp from "./CounterFuncComp";
 
 import CounterClassComp from "./CounterClassComp";
-import CounterClassComp2 from './CounterClassComp2';
+import CounterClassComp2 from "./CounterClassComp2";
 
+class Index extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
 
-class Index extends Component {
-    render() {
-        return (
-            <div>
-                <CounterFuncComp/>
+  render() {
+    return (
+      <div>
+        <CounterFuncComp />
 
-                <CounterClassComp/>
+        <CounterClassComp />
 
-
-                <CounterClassComp2/>
-            </div>
-        );
-    }
+        <CounterClassComp2 />
+      </div>
+    );
+  }
 }
 
 export default Index;

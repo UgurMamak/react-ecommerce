@@ -1,13 +1,19 @@
-import React, { Component } from "react";
+import React from "react";
 import { connect } from "react-redux";
 
-class ReduxStatePage extends Component {
+class ReduxStatePage extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+
   render() {
+    const { globalState } = this.props;
     return (
       <div>
         ReduxStatePage
         <pre>
-          <code>{JSON.stringify(this.props.globalState, null, 4)}</code>
+          <code>{JSON.stringify(globalState, null, 4)}</code>
         </pre>
       </div>
     );

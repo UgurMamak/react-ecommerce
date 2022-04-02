@@ -1,14 +1,14 @@
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+import React from "react";
+import "./App.css";
 
-import './App.css';
+import Header from "./components/header/Header";
+import Footer from "./components/footer/Footer";
 
-import Header from "./components/header/Header"
-import Footer from "./components/footer/Footer"
-
-import Index from "./pages/Index"
-import ProductListing from "./pages/ProductList/ProductList"
+import Index from "./pages/Index";
+import ProductListing from "./pages/ProductList/ProductList";
 import ProductDetail from "./pages/ProductDetail/ProductDetail";
-import NotFound from "./pages/404"
+import NotFound from "./pages/404";
 import Cart from "./pages/Cart/Cart";
 
 import ReduxStatePage from "./pages/ReduxStatePage";
@@ -16,23 +16,21 @@ import ReduxStatePage from "./pages/ReduxStatePage";
 import ReduxExample from "./components/redux-example";
 
 function App() {
-    return (
-        <>
-            <Header/>
-            <ReduxExample/>
-            <Routes>
-                <Route path='*' element={<NotFound />} />
-                <Route path="/" element={<Index />} />
-                <Route path="product-listing" element={<ProductListing />} />
-                <Route path="product-detail" element={<ProductDetail />} />
-                <Route path="cart" element={<Cart/>} />
-                <Route path="redux-state-page" element={<ReduxStatePage/>} />
-            </Routes>
-            <Footer/>
-        </>
-    );
+  return (
+    <>
+      <Header />
+      <ReduxExample />
+      <Routes>
+        <Route path="*" element={<NotFound />} />
+        <Route path="/" element={<Index />} />
+        <Route path="product-listing" element={<ProductListing />} />
+        <Route path="product-detail" element={<ProductDetail />} />
+        <Route path="cart" element={<Cart />} />
+        <Route path="redux-state-page" element={<ReduxStatePage />} />
+      </Routes>
+      <Footer />
+    </>
+  );
 }
-
-
 
 export default App;

@@ -1,7 +1,15 @@
 import React, { Component } from "react";
 
 class ContactForm extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      email: "",
+    };
+  }
+
   render() {
+    const { email, message } = this.state;
     return (
       <>
         <div
@@ -21,25 +29,35 @@ class ContactForm extends Component {
           <footer>
             <form action="product-listing.html" method="post">
               <div className="form-group">
-                <label>
+                <label htmlFor="firstName">
                   Name<span>*</span>
+                  <input
+                    name="firstName"
+                    id="firstName"
+                    className="form-control"
+                    type="text"
+                  />
                 </label>
-                <input className="form-control" type="text" />
               </div>
               <div className="form-group">
-                <label>
+                <label htmlFor={email}>
                   Email<span>*</span>
                 </label>
-                <input className="form-control" type="email" />
+                <input className="form-control" id={email} type="email" />
               </div>
               <div className="form-group">
-                <label>
+                <label htmlFor={message}>
                   Your message<span>*</span>
                 </label>
-                <textarea className="form-control" rows={4} defaultValue={""} />
+                <textarea
+                  id={message}
+                  className="form-control"
+                  rows={4}
+                  defaultValue=""
+                />
               </div>
               <div className="form-group text-center">
-                <button className="ps-btn">
+                <button type="button" className="ps-btn">
                   Send Message
                   <i className="fa fa-angle-right" />
                 </button>

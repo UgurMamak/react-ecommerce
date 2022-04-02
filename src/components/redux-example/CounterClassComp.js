@@ -1,25 +1,31 @@
-import React, { Component } from "react";
+import React from "react";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 
 import * as exampleActions from "../../redux/example/actions";
 
-class CounterClassComp extends Component {
-  test = () => {
-    const ugur = "5";
-    const item = {};
-
-    console.log(ugur, item);
-  };
+class CounterClassComp extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
 
   render() {
-    const item = new Object();
+    const {
+      counter: { count },
+      decrement,
+      increment,
+    } = this.props;
     return (
       <div className="container">
         <h1>Class component</h1>
-        <h2>{this.props.counter.count}</h2>
-        <button onClick={() => this.props.decrement()}>-</button>
-        <button onClick={() => this.props.increment()}>+</button>
+        <h2>{count}</h2>
+        <button type="button" onClick={() => decrement()}>
+          -
+        </button>
+        <button type="button" onClick={() => increment()}>
+          +
+        </button>
       </div>
     );
   }

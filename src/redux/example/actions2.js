@@ -1,27 +1,17 @@
+function doubleDecrement() {
+  return { type: "counter/doubleDecrement" };
+}
+
+const doubleIncrement = () => ({ type: "counter/doubleIncrement", payload: 2 });
+
+export const doubleDecrementAction = () => (dispatch) => {
+  dispatch(doubleDecrement());
+};
+
+export const incrementDoubleAction = () => (dispatch) => {
+  dispatch(doubleIncrement());
+};
 
 export const actionCreators = {
-   doubleDecrement
+  doubleDecrement,
 };
-
-
-function doubleDecrement(){
- return { type: 'counter/doubleDecrement' }
-}
-
-const doubleIncrement=()=>{
-  return { type: 'counter/doubleIncrement', payload: 2 }
-}
-
-
-export const doubleDecrementAction= body => {
-  return dispatch => {
-    dispatch(doubleDecrement());
-  }
-};
-
-
-export const incrementDoubleAction=()=>{
-  return  dispatch=>{
-      dispatch(doubleIncrement())
-  }
-}

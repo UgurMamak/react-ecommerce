@@ -1,2 +1,4 @@
 kebab-case folder name
 PascalCase  components name
+
+process.env.PUBLIC_URL

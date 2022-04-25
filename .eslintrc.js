@@ -11,7 +11,7 @@ module.exports = {
     ecmaVersion: "latest",
     sourceType: "module",
   },
-  plugins: ["prettier", "jsx-a11y"],
+  plugins: ["prettier", "jsx-a11y", "react-hooks"],
   rules: {
     "prettier/prettier": ["error"],
     "react/jsx-filename-extension": [1, { extensions: [".js", ".jsx"] }],
@@ -27,6 +27,9 @@ module.exports = {
     "jsx-a11y/anchor-is-valid": "off",
     "jsx-a11y/anchor-has-content": "off",
     "no-shadow": "off",
+    "react/no-array-index-key": 0,
+    "react-hooks/rules-of-hooks": "error", // Checks rules of Hooks
+    "react-hooks/exhaustive-deps": "warn", // Checks effect dependencies
     /*   "jsx-a11y/label-has-for": [
       "error",
       {

@@ -380,7 +380,7 @@
     }
   }
 
-  function productVariantsAjax() {
+  /* function productVariantsAjax() {
     const selector = $(".ps-btn");
     const shoe = $(".ps-shoe");
     shoe.on("mouseenter", function () {
@@ -433,7 +433,7 @@
         return false;
       }
     });
-  }
+  } */
 
   function productThumbnailChange() {
     let originImageData;
@@ -722,7 +722,7 @@
     countDown();
     masonry();
     stickyHeader();
-    productVariantsAjax();
+    // productVariantsAjax();
     productThumbnailChange();
     bootstrapSelect();
     slickConfig();

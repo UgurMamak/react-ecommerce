@@ -1,422 +1,217 @@
-import React from "react";
-
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import Isotope from "isotope-layout";
 import ProductCard from "../../components/product-card/ProductCard";
 import PostCard from "../../components/post-card/PostCard";
 import ContactForm from "../../components/contact-form/ContactForm";
 
-class Index extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
+import IsotopeComp from "../../components/isotope";
 
-  render() {
-    return (
-      <div className="ps-main">
-        <div className="ps-section--features-product ps-section masonry-root pt-100 pb-100">
-          <div className="ps-container">
-            <div className="ps-section__header mb-50">
-              <h3 className="ps-section__title" data-mask="features">
-                - Features Products
-              </h3>
-              <ul className="ps-masonry__filter">
-                <li className="current">
-                  <a href="#" data-filter="*">
-                    All <sup>8</sup>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" data-filter=".nike">
-                    Nike <sup>1</sup>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" data-filter=".adidas">
-                    Adidas <sup>1</sup>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" data-filter=".men">
-                    Men <sup>1</sup>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" data-filter=".women">
-                    Women <sup>1</sup>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" data-filter=".kids">
-                    Kids <sup>4</sup>
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div className="ps-section__content pb-50">
-              <div
-                className="masonry-wrapper"
-                data-col-md={4}
-                data-col-sm={2}
-                data-col-xs={1}
-                data-gap={30}
-                data-radio="100%"
-              >
-                <div className="ps-masonry">
-                  <div className="grid-sizer" />
-                  <div className="grid-item kids">
-                    <div className="grid-item__content-wrapper">
-                      <ProductCard />
-                    </div>
-                  </div>
-                  <div className="grid-item nike">
-                    <div className="grid-item__content-wrapper">
-                      <ProductCard />
-                    </div>
-                  </div>
-                  <div className="grid-item adidas">
-                    <div className="grid-item__content-wrapper">
-                      <ProductCard />
-                    </div>
-                  </div>
-                  <div className="grid-item kids">
-                    <div className="grid-item__content-wrapper">
-                      <ProductCard />
-                    </div>
-                  </div>
-                  <div className="grid-item men">
-                    <div className="grid-item__content-wrapper">
-                      <ProductCard />
-                    </div>
-                  </div>
-                  <div className="grid-item women">
-                    <div className="grid-item__content-wrapper">
-                      <ProductCard />
-                    </div>
-                  </div>
-                  <div className="grid-item kids">
-                    <div className="grid-item__content-wrapper">
-                      <ProductCard />
-                    </div>
-                  </div>
-                  <div className="grid-item kids">
-                    <div className="grid-item__content-wrapper">
-                      <ProductCard />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+const dummy = {
+  id: 1,
+  name: "Air Jordan 7 Retro",
+  images: [
+    "https://swiperjs.com/demos/images/nature-1.jpg",
+    "https://swiperjs.com/demos/images/nature-2.jpg",
+    "https://swiperjs.com/demos/images/nature-3.jpg",
+    "https://swiperjs.com/demos/images/nature-4.jpg",
+    "https://swiperjs.com/demos/images/nature-5.jpg",
+    "https://swiperjs.com/demos/images/nature-6.jpg",
+    "https://swiperjs.com/demos/images/nature-7.jpg",
+  ],
+  imagesAlt: "test",
+  brand: {
+    id: 1,
+    name: "Nike",
+  },
+  url: "test",
+  ratingScore: {
+    averageRating: 4.3,
+    totalCount: 10,
+  },
+  price: {
+    oldPrice: 100,
+    newPrice: 86.6,
+  },
+  freeCargo: true,
+  merchantId: 1,
+  categoryId: 530,
+  categoryName: "Ayakkabı",
+  filter: ["kids"],
+};
 
-        <div className="ps-section--offer">
-          <div className="ps-column">
-            <a className="ps-offer" href="product-listing.html">
-              <img
-                src="skytheme-ecommerce-html5-template/template/images/banner/home-banner-1.png"
-                alt=""
-              />
-            </a>
-          </div>
-          <div className="ps-column">
-            <a className="ps-offer" href="product-listing.html">
-              <img
-                src="skytheme-ecommerce-html5-template/template/images/banner/home-banner-2.png"
-                alt=""
-              />
-            </a>
-          </div>
-        </div>
+const filtersDefault = [
+  { label: "all", isChecked: true },
+  { label: "red", isChecked: false },
+  { label: "green", isChecked: false },
+  { label: "yellow", isChecked: false },
+];
 
-        <div className="ps-section--sale-off ps-section pt-80 pb-40">
-          <div className="ps-container">
-            <div className="ps-section__header mb-50">
-              <h3 className="ps-section__title" data-mask="Sale off">
-                - Hot Deal Today
-              </h3>
-            </div>
-            <div className="ps-section__content">
-              <div className="row">
-                <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12 ">
-                  <div className="ps-hot-deal">
-                    <h3>Nike DUNK Max 95 OG</h3>
-                    <p className="ps-hot-deal__price">
-                      Only: <span>£155</span>
-                    </p>
-                    <ul
-                      className="ps-countdown"
-                      data-time="December 13, 2017 15:37:25"
-                    >
-                      <li>
-                        <span className="hours" />
-                        <p>Hours</p>
-                      </li>
-                      <li className="divider">:</li>
-                      <li>
-                        <span className="minutes" />
-                        <p>minutes</p>
-                      </li>
-                      <li className="divider">:</li>
-                      <li>
-                        <span className="seconds" />
-                        <p>Seconds</p>
-                      </li>
-                    </ul>
-                    <a className="ps-btn" href="#">
-                      Order Today
-                      <i className="ps-icon-next" />
-                    </a>
-                  </div>
-                </div>
-                <div className="col-lg-6 col-md-12 col-sm-12 col-xs-12 ">
-                  <div className="ps-hotspot">
-                    <a className="point first active" href="#">
-                      <i className="fa fa-plus" />
-                      <div className="ps-hotspot__content">
-                        <p className="heading">JUMP TO HEADER</p>
-                        <p>
-                          Dynamic Fit Collar en la zona del tobillo que une la
-                          parte inferior de la pierna y el pie sin reducir la
-                          libertad de movimiento.
-                        </p>
-                      </div>
-                    </a>
-                    <a className="point second" href="#">
-                      <i className="fa fa-plus" />
-                      <div className="ps-hotspot__content">
-                        <p className="heading">JUMP TO HEADER</p>
-                        <p>
-                          Dynamic Fit Collar en la zona del tobillo que une la
-                          parte inferior de la pierna y el pie sin reducir la
-                          libertad de movimiento.
-                        </p>
-                      </div>
-                    </a>
-                    <a className="point third" href="#">
-                      <i className="fa fa-plus" />
-                      <div className="ps-hotspot__content">
-                        <p className="heading">JUMP TO HEADER</p>
-                        <p>
-                          Dynamic Fit Collar en la zona del tobillo que une la
-                          parte inferior de la pierna y el pie sin reducir la
-                          libertad de movimiento.
-                        </p>
-                      </div>
-                    </a>
-                    <img
-                      src="skytheme-ecommerce-html5-template/template/images/hot-deal.png"
-                      alt=""
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+function Index(props) {
+  const [products, setProducts] = useState([]);
+  const [filters, updateFilters] = useState(filtersDefault);
 
-        <div className="ps-section ps-section--top-sales ps-owl-root pt-80 pb-80">
-          <div className="ps-container">
-            <div className="ps-section__header mb-50">
-              <div className="row">
-                <div className="col-lg-9 col-md-9 col-sm-12 col-xs-12 ">
-                  <h3 className="ps-section__title" data-mask="BEST SALE">
-                    - Top Sales
-                  </h3>
-                </div>
-                <div className="col-lg-3 col-md-3 col-sm-12 col-xs-12 ">
-                  <div className="ps-owl-actions">
-                    <a className="ps-prev" href="#">
-                      <i className="ps-icon-arrow-right" />
-                      Prev
-                    </a>
-                    <a className="ps-next" href="#">
-                      Next
-                      <i className="ps-icon-arrow-left" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="ps-section__content">
-              <div
-                className="ps-owl--colection owl-slider"
-                data-owl-auto="true"
-                data-owl-loop="true"
-                data-owl-speed={5000}
-                data-owl-gap={30}
-                data-owl-nav="false"
-                data-owl-dots="false"
-                data-owl-item={4}
-                data-owl-item-xs={1}
-                data-owl-item-sm={2}
-                data-owl-item-md={3}
-                data-owl-item-lg={4}
-                data-owl-duration={1000}
-                data-owl-mousedrag="on"
-              >
-                <div className="ps-shoes--carousel">
-                  <ProductCard />
-                </div>
-                <div className="ps-shoes--carousel">
-                  <ProductCard />
-                </div>
-                <div className="ps-shoes--carousel">
-                  <ProductCard />
-                </div>
-                <div className="ps-shoes--carousel">
-                  <ProductCard />
-                </div>
-                <div className="ps-shoes--carousel">
-                  <ProductCard />
-                </div>
-                <div className="ps-shoes--carousel">
-                  <ProductCard />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+  useEffect(() => {
+    const fetchProductsData = async () => {
+      await axios
+        .get(`${window.location.origin}/dummy/products.json`)
+        .then((response) => setProducts(response.data.data))
+        /* .then((data) => {
+          const temp = data.map((item) => {
+            const test = { ...item, entity: <ProductCard product={dummy} /> };
+            return test;
+          });
 
-        <div
-          className="ps-home-testimonial bg--parallax pb-80"
-          data-background="images/background/parallax.jpg"
-        >
-          <div className="container">
-            <div
-              className="owl-slider"
-              data-owl-auto="true"
-              data-owl-loop="true"
-              data-owl-speed={5000}
-              data-owl-gap={0}
-              data-owl-nav="false"
-              data-owl-dots="true"
-              data-owl-item={1}
-              data-owl-item-xs={1}
-              data-owl-item-sm={1}
-              data-owl-item-md={1}
-              data-owl-item-lg={1}
-              data-owl-duration={1000}
-              data-owl-mousedrag="on"
-              data-owl-animate-in="fadeIn"
-              data-owl-animate-out="fadeOut"
-            >
-              <div className="ps-testimonial">
-                <div className="ps-testimonial__thumbnail">
-                  <img
-                    src="skytheme-ecommerce-html5-template/template/images/testimonial/1.jpg"
-                    alt=""
-                  />
-                  <i className="fa fa-quote-left" />
-                </div>
-                <header>
-                  <select className="ps-rating">
-                    <option value={1}>1</option>
-                    <option value={1}>2</option>
-                    <option value={1}>3</option>
-                    <option value={1}>4</option>
-                    <option value={5}>5</option>
-                  </select>
-                  <p>Logan May - CEO &amp; Founder Invision</p>
-                </header>
-                <footer>
-                  <p>
-                    “Dessert pudding dessert jelly beans cupcake sweet caramels
-                    gingerbread. Fruitcake biscuit cheesecake. Cookie topping
-                    sweet muffin pudding tart bear claw sugar plum croissant. “
-                  </p>
-                </footer>
-              </div>
-              <div className="ps-testimonial">
-                <div className="ps-testimonial__thumbnail">
-                  <img
-                    src="skytheme-ecommerce-html5-template/template/images/testimonial/2.jpg"
-                    alt=""
-                  />
-                  <i className="fa fa-quote-left" />
-                </div>
-                <header>
-                  <select className="ps-rating">
-                    <option value={1}>1</option>
-                    <option value={1}>2</option>
-                    <option value={1}>3</option>
-                    <option value={1}>4</option>
-                    <option value={5}>5</option>
-                  </select>
-                  <p>Logan May - CEO &amp; Founder Invision</p>
-                </header>
-                <footer>
-                  <p>
-                    “Dessert pudding dessert jelly beans cupcake sweet caramels
-                    gingerbread. Fruitcake biscuit cheesecake. Cookie topping
-                    sweet muffin pudding tart bear claw sugar plum croissant. “
-                  </p>
-                </footer>
-              </div>
-              <div className="ps-testimonial">
-                <div className="ps-testimonial__thumbnail">
-                  <img
-                    src="skytheme-ecommerce-html5-template/template/images/testimonial/3.jpg"
-                    alt=""
-                  />
-                  <i className="fa fa-quote-left" />
-                </div>
-                <header>
-                  <select className="ps-rating">
-                    <option value={1}>1</option>
-                    <option value={1}>2</option>
-                    <option value={1}>3</option>
-                    <option value={1}>4</option>
-                    <option value={5}>5</option>
-                  </select>
-                  <p>Logan May - CEO &amp; Founder Invision</p>
-                </header>
-                <footer>
-                  <p>
-                    “Dessert pudding dessert jelly beans cupcake sweet caramels
-                    gingerbread. Fruitcake biscuit cheesecake. Cookie topping
-                    sweet muffin pudding tart bear claw sugar plum croissant. “
-                  </p>
-                </footer>
-              </div>
-            </div>
-          </div>
-        </div>
+          setProducts(temp);
+         
+        }) */
+        .catch((error) => {
+          console.log("hata", error);
+        });
+    };
 
-        <div className="ps-section ps-home-blog pt-80 pb-80">
-          <div className="ps-container">
-            <div className="ps-section__header mb-50">
-              <h2 className="ps-section__title" data-mask="News">
-                - Our Story
-              </h2>
-              <div className="ps-section__action">
-                <a className="ps-morelink text-uppercase" href="#">
-                  View all post
-                  <i className="fa fa-long-arrow-right" />
-                </a>
-              </div>
-            </div>
-            <div className="ps-section__content">
-              <div className="row">
-                <div className="col-lg-4 col-md-4 col-sm-12 col-xs-12 ">
-                  <PostCard />
-                </div>
-                <div className="col-lg-4 col-md-4 col-sm-12 col-xs-12 ">
-                  <PostCard />
-                </div>
-                <div className="col-lg-4 col-md-4 col-sm-12 col-xs-12 ">
-                  <PostCard />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+    fetchProductsData();
+  }, []);
 
-        <div className="ps-home-contact">
-          <ContactForm />
-        </div>
-      </div>
+  function onFilter(event) {
+    const {
+      target: { value, checked },
+    } = event;
+
+    updateFilters((state) =>
+      state.map((f) => {
+        if (f.label === value) {
+          return {
+            ...f,
+            isChecked: checked,
+          };
+        }
+
+        return f;
+      })
     );
   }
+
+  return (
+    <div className="ps-main">
+      <div className="ps-section--features-product ps-section masonry-root pt-100 pb-100">
+        <div className="ps-container">
+          <div className="ps-section__header mb-50">
+            <h3 className="ps-section__title" data-mask="features">
+              - Features Products
+            </h3>
+            <ul className="ps-masonry__filter">
+              <li className="current">
+                <a href="#" data-filter="*">
+                  All <sup>8</sup>
+                </a>
+              </li>
+              <li>
+                <a href="#" data-filter=".nike">
+                  Nike <sup>1</sup>
+                </a>
+              </li>
+              <li>
+                <a href="#" data-filter=".adidas">
+                  Adidas <sup>1</sup>
+                </a>
+              </li>
+              <li>
+                <a href="#" data-filter=".men">
+                  Men <sup>1</sup>
+                </a>
+              </li>
+              <li>
+                <a href="#" data-filter=".women">
+                  Women <sup>1</sup>
+                </a>
+              </li>
+              <li>
+                <a href="#" data-filter=".kids">
+                  Kids <sup>4</sup>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div className="ps-section__content pb-50">
+            <div
+              className="masonry-wrapper"
+              data-col-md={4}
+              data-col-sm={2}
+              data-col-xs={1}
+              data-gap={30}
+              data-radio="100%"
+            >
+              <div className="ps-masonry">
+                <div className="filters">
+                  {filters.map((f) => (
+                    <div className="filter" key={`${f.label}_key`}>
+                      <input
+                        id={f.label}
+                        type="checkbox"
+                        value={f.label}
+                        onChange={onFilter}
+                        checked={f.isChecked}
+                      />
+                      <label htmlFor={f.label}>{f.label}</label>
+                    </div>
+                  ))}
+                </div>
+
+                <IsotopeComp data={products} filters={filters}>
+                  {products.map((product, index) => (
+                    <div key={index} className="ps-shoe mb-30">
+                      <div className="ps-shoe__thumbnail">
+                        <div className="ps-badge">
+                          <span>New</span>
+                        </div>
+                        <div className="ps-badge ps-badge--sale ps-badge--2nd">
+                          <span>-35%</span>
+                        </div>
+                        <a className="ps-shoe__favorite" href="#">
+                          <i className="ps-icon-heart" />
+                        </a>
+
+                        <a
+                          className="ps-shoe__overlay"
+                          aria-label="''"
+                          href="product-detail.html"
+                        />
+                      </div>
+                      <div className="ps-shoe__content">
+                        <div className="ps-shoe__variants">
+                          <div className="ps-shoe__variant normal" />
+                          <select className="ps-rating ps-shoe__rating">
+                            <option value={1}>1</option>
+                            <option value={1}>2</option>
+                            <option value={1}>3</option>
+                            <option value={1}>4</option>
+                            <option value={2}>5</option>
+                          </select>
+                        </div>
+                        <div className="ps-shoe__detail">
+                          <a className="ps-shoe__name" href="#">
+                            {product.name}
+                          </a>
+                          <p className="ps-shoe__categories">
+                            <a href="#">{product.categoryName}</a>
+                          </p>
+                          <span className="ps-shoe__price">
+                            <del>£{product.price.oldPrice}</del> £{" "}
+                            {product.price.newPrice}
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </IsotopeComp>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default Index;

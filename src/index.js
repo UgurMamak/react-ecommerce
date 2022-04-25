@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import "./index.css";
+import "./index.scss";
 import { Provider } from "react-redux";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
@@ -22,7 +23,7 @@ function AppWithCallbackAfterRender() {
     console.log("rendered");
     /* eslint-enable no-console */
 
-    const assets = [
+    /* const assets = [
       "skytheme-ecommerce-html5-template/template/plugins/jquery/dist/jquery.min.js",
       "skytheme-ecommerce-html5-template/template/plugins/bootstrap/dist/js/bootstrap.min.js",
       "skytheme-ecommerce-html5-template/template/plugins/jquery-bar-rating/dist/jquery.barrating.min.js",
@@ -51,10 +52,11 @@ function AppWithCallbackAfterRender() {
     assets.forEach((item) => {
       const script = document.createElement("script");
       script.src = item;
+      script.type = "text/javascript";
       script.async = true;
       // script.onload = () => this.scriptLoaded();
       document.body.appendChild(script);
-    });
+    }); */
   });
 
   return (

@@ -7,10 +7,45 @@ import FilterMenu from "../../components/filter-menu/FilterMenu";
 class ProductList extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      products: [
+        {
+          id: 1,
+          name: "Air Jordan 7 Retro",
+          images: [
+            "https://swiperjs.com/demos/images/nature-1.jpg",
+            "https://swiperjs.com/demos/images/nature-2.jpg",
+            "https://swiperjs.com/demos/images/nature-3.jpg",
+            "https://swiperjs.com/demos/images/nature-4.jpg",
+            "https://swiperjs.com/demos/images/nature-5.jpg",
+            "https://swiperjs.com/demos/images/nature-6.jpg",
+            "https://swiperjs.com/demos/images/nature-7.jpg",
+          ],
+          imagesAlt: "test",
+          brand: {
+            id: 1,
+            name: "Nike",
+          },
+          url: "test",
+          ratingScore: {
+            averageRating: 4.3,
+            totalCount: 10,
+          },
+          price: {
+            oldPrice: 100,
+            newPrice: 86.6,
+          },
+          freeCargo: true,
+          merchantId: 1,
+          categoryId: 530,
+          categoryName: "Ayakkabı",
+        },
+      ],
+    };
   }
 
   render() {
+    const { products } = this.state;
     return (
       <main className="ps-main">
         <div className="ps-products-wrap pt-80 pb-80">
@@ -27,7 +62,13 @@ class ProductList extends React.Component {
               <Pagination />
             </div>
             <div className="ps-product__columns">
-              <div className="ps-product__column">
+              {products.map((product, index) => (
+                <div className="ps-product__column" key={index}>
+                  <ProductCard product={product} />
+                </div>
+              ))}
+
+              {/* <div className="ps-product__column">
                 <ProductCard />
               </div>
               <div className="ps-product__column">
@@ -83,8 +124,9 @@ class ProductList extends React.Component {
               </div>
               <div className="ps-product__column">
                 <ProductCard />
-              </div>
+              </div> */}
             </div>
+
             <div className="ps-product-action">
               <div className="ps-product__filter">
                 <select className="ps-select selectpicker">
@@ -114,7 +156,7 @@ class ProductList extends React.Component {
                   action="do_action"
                   method="post"
                 >
-                  <input className="form-control" type="text" placeholder />
+                  <input className="form-control" type="text" placeholder="" />
                   <button type="button">Sign up now</button>
                 </form>
               </div>

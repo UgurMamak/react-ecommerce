@@ -5,7 +5,7 @@ import "./App.css";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 
-import Index from "./pages/Index";
+import Index from "./pages/Index/index2";
 import ProductListing from "./pages/ProductList/ProductList";
 import ProductDetail from "./pages/ProductDetail/ProductDetail";
 import NotFound from "./pages/404";
@@ -14,12 +14,13 @@ import Cart from "./pages/Cart/Cart";
 import ReduxStatePage from "./pages/ReduxStatePage";
 
 import ReduxExample from "./components/redux-example";
+import Test from "./pages/test";
 
 function App() {
   return (
     <>
       <Header />
-      <ReduxExample />
+      {/*   <ReduxExample /> */}
       <Routes>
         <Route path="*" element={<NotFound />} />
         <Route path="/" element={<Index />} />
@@ -27,6 +28,7 @@ function App() {
         <Route path="product-detail" element={<ProductDetail />} />
         <Route path="cart" element={<Cart />} />
         <Route path="redux-state-page" element={<ReduxStatePage />} />
+        <Route path="test" element={<Test />} />
       </Routes>
       <Footer />
     </>

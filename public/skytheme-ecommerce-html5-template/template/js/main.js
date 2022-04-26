@@ -720,7 +720,7 @@
     // setHeightProduct();
     navigateOwlCarousel();
     countDown();
-    masonry();
+    // masonry();
     stickyHeader();
     // productVariantsAjax();
     productThumbnailChange();

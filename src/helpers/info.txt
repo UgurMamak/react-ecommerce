@@ -4,6 +4,49 @@ PascalCase  components name
 process.env.PUBLIC_URL
 
 
+ <div className="filters">
+                {filters.map((f) => (
+                  <div className="filter" key={`${f.label}_key`}>
+                    <input
+                      id={f.label}
+                      type="radio"
+                      value={f.value}
+                      onChange={onFilter}
+                      checked={f.isChecked}
+                      data-filter={f.value}
+                    />
+                    <label htmlFor={f.label}>{f.label}</label>
+                  </div>
+                ))}
+              </div>
+
+  const onFilter = (event) => {
+    const {
+      target: {
+        value,
+        checked,
+        dataset: { filter },
+      },
+    } = event;
+
+    
+
+    updateFilters((state) =>
+      state.map((f) => {
+        if (f.label === value) {
+          return {
+            ...f,
+            isChecked: checked,
+          };
+        }
+        return {
+          ...f,
+          isChecked: false,
+        };
+      })
+    );
+  };
+
 
  const onFilter = (event) => {
     const {

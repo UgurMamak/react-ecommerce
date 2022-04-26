@@ -5,7 +5,7 @@ import "./App.css";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 
-import Index from "./pages/Index/index2";
+import Index from "./pages/Index";
 import ProductListing from "./pages/ProductList/ProductList";
 import ProductDetail from "./pages/ProductDetail/ProductDetail";
 import NotFound from "./pages/404";

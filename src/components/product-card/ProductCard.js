@@ -16,8 +16,6 @@ import { useDispatch } from "react-redux";
 function ProductCard({ product }) {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
-  console.log("product=", product);
-
   return (
     <div className="ps-shoe mb-30">
       <div className="ps-shoe__thumbnail">
@@ -139,7 +137,7 @@ function ProductCard({ product }) {
         </div>
         <div className="ps-shoe__detail">
           <a className="ps-shoe__name" href="#">
-            {product.name}
+            {`${product.name} ${product.filter[0]}`}
           </a>
           <p className="ps-shoe__categories">
             <a href="#">{product.categoryName}</a>

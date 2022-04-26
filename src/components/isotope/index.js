@@ -1,47 +1,42 @@
-import React, { useState, useEffect, useRef } from "react";
-
+import React, { useEffect, useState, useRef } from "react";
 import Isotope from "isotope-layout";
 
-export default function IsotopeReact({ data, filters, children }) {
+function Index({ children, data, filters }) {
   const [isotope, setIsotope] = useState(null);
-  const [filterKey, setFilterKey] = useState("*");
-  const inputEl = useRef(null);
+  const istotopeContainer = useRef(null);
 
-  /* useEffect(() => {
-    setTimeout(() => {
+  useEffect(() => {
+    const initIsotope = async () => {
       setIsotope(
-        new Isotope(inputEl.current, {
+        new Isotope(istotopeContainer.current, {
           itemSelector: ".grid-item",
           layoutMode: "fitRows",
         })
       );
-    }, 1);
-  }, []); */
-
-  /* useEffect(() => {
-    if (isotope) {
-      filterKey === "*"
-        ? isotope.arrange({ filter: `*` })
-        : isotope.arrange({ filter: `.${filterKey}` });
-    }
-  }, [isotope, filterKey]); */
+    };
+    initIsotope();
+  }, [data]);
 
   useEffect(() => {
-    setIsotope(
-      new Isotope(inputEl.current, {
-        itemSelector: ".grid-item",
-        layoutMode: "fitRows",
-      })
-    );
-  });
+    if (isotope) {
+      const selectedItem = filters.find((x) => x.isChecked === true);
+      const selectedValue = selectedItem ? selectedItem.value : "*";
+
+      selectedValue === "*"
+        ? isotope.arrange({ filter: `*` })
+        : isotope.arrange({ filter: `.${selectedValue}` });
+    }
+  }, [filters]);
 
   return (
-    <div className="isotope-container" ref={inputEl}>
-      {data.map((item, index) => (
-        <div className="grid-item" key={index}>
-          <div className="grid-item__content-wrapper">{children}</div>
+    <div ref={istotopeContainer} className="isotope-container">
+      {children.map((item, index) => (
+        <div className={`grid-item ${data[index].filter[0]}`} key={index}>
+          <div className="grid-item__content-wrapper">{item}</div>
         </div>
       ))}
     </div>
   );
 }
+
+export default Index;

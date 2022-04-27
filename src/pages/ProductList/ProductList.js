@@ -2,7 +2,7 @@ import React from "react";
 
 import ProductCard from "../../components/product-card/ProductCard";
 import Pagination from "../../components/pagination/Pagination";
-import FilterMenu from "../../components/filter-menu/FilterMenu";
+import FilterMenu from "../../components/filter-menu";
 
 class ProductList extends React.Component {
   constructor(props) {

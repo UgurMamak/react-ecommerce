@@ -5,6 +5,7 @@ import PostCard from "../../components/post-card";
 import ContactForm from "../../components/contact-form";
 
 import IsotopeComp from "../../components/isotope";
+import Rating from "../../components/rating";
 
 const filtersDefault = [
   { label: "All", value: "*", isChecked: true },
@@ -60,6 +61,22 @@ function Index(props) {
 
   return (
     <div className="ps-main">
+      <Rating point={4.4} />
+
+      <Rating point={3.2} />
+      <div className=" d-none rating-wrapper">
+        <div className="ratings-content">
+          <div className="rating-item">
+            <div className="empty" />
+            <div className="full" />
+          </div>
+          <div className="rating-item">
+            <div className="empty" />
+            <div className="full" style={{ width: "50%" }} />
+          </div>
+        </div>
+      </div>
+
       <div className="ps-section--features-product ps-section masonry-root pt-100 pb-100">
         <div className="ps-container">
           <div className="ps-section__header mb-50">

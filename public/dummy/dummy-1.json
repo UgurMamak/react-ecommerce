@@ -1,5 +1,7 @@
 {
   "status": "success",
+  "title": "Features Products2",
+  "maskTitle": "features2",
   "facets": [
     { "label": "All deneme", "value": "*", "isChecked": true },
     { "label": "red deneme", "value": "red", "isChecked": false },
@@ -134,6 +136,38 @@
       "categoryId": 530,
       "categoryName": "Ayakkabı",
       "filter": ["kids"]
+    },
+    {
+      "id": 5,
+      "name": "Air Jordan 7 Retro",
+      "images": [
+        "https://swiperjs.com/demos/images/nature-1.jpg",
+        "https://swiperjs.com/demos/images/nature-2.jpg",
+        "https://swiperjs.com/demos/images/nature-3.jpg",
+        "https://swiperjs.com/demos/images/nature-4.jpg",
+        "https://swiperjs.com/demos/images/nature-5.jpg",
+        "https://swiperjs.com/demos/images/nature-6.jpg",
+        "https://swiperjs.com/demos/images/nature-7.jpg"
+      ],
+      "imagesAlt": "test",
+      "brand": {
+        "id": 1,
+        "name": "Nike"
+      },
+      "url": "test",
+      "ratingScore": {
+        "averageRating": 4.3,
+        "totalCount": 10
+      },
+      "price": {
+        "oldPrice": 100,
+        "newPrice": 86.6
+      },
+      "freeCargo": true,
+      "merchantId": 1,
+      "categoryId": 530,
+      "categoryName": "green",
+      "filter": ["red"]
     }
   ]
 }

@@ -4,16 +4,16 @@ import ProductCard from "../../components/product-card/ProductCard";
 import IsotopeComp from "../../components/isotope";
 
 function Index(props) {
-  const [products, setProducts] = useState([]);
-  const [filters, updateFilters] = useState([]);
+  const [isotopeData, setIsotopeData] = useState([]);
+  const [filters, setFilters] = useState([]);
 
   useEffect(() => {
     const fetchProductsData = async () => {
       await axios
         .get(`${window.location.origin}/dummy/dummy-1.json`)
         .then((response) => {
-          setProducts(response.data.products);
-          updateFilters(response.data.facets);
+          setIsotopeData(response.data);
+          setFilters(response.data.facets);
         })
         .catch((error) => {
           console.log("hata", error);
@@ -33,7 +33,7 @@ function Index(props) {
       },
     } = event;
 
-    updateFilters((state) =>
+    setFilters((state) =>
       state.map((f) => {
         if (f.value === filter) {
           return {
@@ -49,19 +49,33 @@ function Index(props) {
     );
   };
 
+  if (isotopeData.length === 0) return <div>Loading</div>;
+
   return (
     <div className="ps-main">
       <div className="ps-section--features-product ps-section masonry-root pt-100 pb-100">
         <div className="ps-container">
           <div className="ps-section__header mb-50">
-            <h3 className="ps-section__title" data-mask="features">
-              - Features Products
+            <h3 className="ps-section__title" data-mask={isotopeData.maskTitle}>
+              - {isotopeData.title}
             </h3>
             <ul className="ps-masonry__filter">
               {filters.map((f, index) => (
                 <li className={f.isChecked ? "current" : ""} key={index}>
                   <a href="#" onClick={onFilter} data-filter={f.value}>
-                    {f.label} <sup>8</sup>
+                    {f.label}{" "}
+                    <sup>
+                      {f.value === "*"
+                        ? isotopeData.products.length
+                        : isotopeData.products
+                          .map((product) => {
+                            const b = product.filter.filter(
+                              (x) => x == f.value
+                            ).length;
+                            return b;
+                          })
+                          .reduce((a, b) => a + b, 0)}
+                    </sup>
                   </a>
                 </li>
               ))}
@@ -76,8 +90,8 @@ function Index(props) {
               data-gap={30}
               data-radio="100%"
             >
-              <IsotopeComp data={products} filters={filters}>
-                {products.map((product, index) => (
+              <IsotopeComp data={isotopeData.products} filters={filters}>
+                {isotopeData.products.map((product, index) => (
                   <ProductCard key={index} product={product} />
                 ))}
               </IsotopeComp>

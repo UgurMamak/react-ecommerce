@@ -13,7 +13,12 @@ module.exports = {
   },
   plugins: ["prettier", "jsx-a11y", "react-hooks"],
   rules: {
-    "prettier/prettier": ["error"],
+    "prettier/prettier": [
+      "error",
+      {
+        endOfLine: "auto",
+      },
+    ],
     "react/jsx-filename-extension": [1, { extensions: [".js", ".jsx"] }],
     "react/prop-types": "off",
     "jsx-a11y/label-has-associated-control": [

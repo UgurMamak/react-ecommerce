@@ -9,6 +9,8 @@ import "swiper/css/thumbs";
 
 import "./index.scss";
 
+import Rating from "../rating"
+
 import { FreeMode, Navigation, Thumbs } from "swiper";
 import { useDispatch } from "react-redux";
 /* eslint-enable */
@@ -134,6 +136,7 @@ function ProductCard({ product }) {
             <option value={1}>4</option>
             <option value={2}>5</option>
           </select>
+          <Rating point={4.4} />
         </div>
         <div className="ps-shoe__detail">
           <a className="ps-shoe__name" href="#">

@@ -1,29 +1,19 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import ProductCard from "../../components/product-card/ProductCard";
-import PostCard from "../../components/post-card";
-import ContactForm from "../../components/contact-form";
-
 import IsotopeComp from "../../components/isotope";
-import Rating from "../../components/rating";
-
-const filtersDefault = [
-  { label: "All", value: "*", isChecked: true },
-  { label: "red", value: "red", isChecked: false },
-  { label: "green", value: "green", isChecked: false },
-  { label: "yellow", value: "yellow", isChecked: false },
-];
 
 function Index(props) {
   const [products, setProducts] = useState([]);
-  const [filters, updateFilters] = useState(filtersDefault);
+  const [filters, updateFilters] = useState([]);
 
   useEffect(() => {
     const fetchProductsData = async () => {
       await axios
-        .get(`${window.location.origin}/dummy/products.json`)
+        .get(`${window.location.origin}/dummy/dummy-1.json`)
         .then((response) => {
-          setProducts(response.data.data);
+          setProducts(response.data.products);
+          updateFilters(response.data.facets);
         })
         .catch((error) => {
           console.log("hata", error);
@@ -61,22 +51,6 @@ function Index(props) {
 
   return (
     <div className="ps-main">
-      <Rating point={4.4} />
-
-      <Rating point={3.2} />
-      <div className=" d-none rating-wrapper">
-        <div className="ratings-content">
-          <div className="rating-item">
-            <div className="empty" />
-            <div className="full" />
-          </div>
-          <div className="rating-item">
-            <div className="empty" />
-            <div className="full" style={{ width: "50%" }} />
-          </div>
-        </div>
-      </div>
-
       <div className="ps-section--features-product ps-section masonry-root pt-100 pb-100">
         <div className="ps-container">
           <div className="ps-section__header mb-50">
@@ -95,7 +69,7 @@ function Index(props) {
           </div>
           <div className="ps-section__content pb-50">
             <div
-              className="masonry-wrapper"
+              className="ugur-test masonry-wrapper"
               data-col-md={4}
               data-col-sm={2}
               data-col-xs={1}

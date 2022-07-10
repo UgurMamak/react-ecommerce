@@ -12,7 +12,7 @@ import "./index.scss";
 import Rating from "../rating"
 
 import { FreeMode, Navigation, Thumbs } from "swiper";
-import { useDispatch } from "react-redux";
+
 /* eslint-enable */
 /* eslint-disable react/jsx-props-no-spreading */
 function ProductCard({ product }) {
@@ -70,73 +70,14 @@ function ProductCard({ product }) {
       </div>
       <div className="ps-shoe__content">
         <div className="ps-shoe__variants">
-          <div className="">
-            <Swiper
-              {...thumbsParams}
-              className="mySwiper ps-shoe__variant normal"
-            >
-              <SwiperSlide>
-                <img
-                  src="https://swiperjs.com/demos/images/nature-1.jpg"
-                  alt=""
-                />
+          <Swiper {...thumbsParams} className="ps-shoe__variant normal">
+            {product.images.map((item, index) => (
+              <SwiperSlide key={index}>
+                <img src={item} alt="" />
               </SwiperSlide>
-              <SwiperSlide>
-                <img
-                  src="https://swiperjs.com/demos/images/nature-2.jpg"
-                  alt="test"
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img
-                  src="https://swiperjs.com/demos/images/nature-3.jpg"
-                  alt="test"
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img
-                  src="https://swiperjs.com/demos/images/nature-4.jpg"
-                  alt="test"
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img
-                  src="https://swiperjs.com/demos/images/nature-5.jpg"
-                  alt="test"
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img
-                  src="https://swiperjs.com/demos/images/nature-6.jpg"
-                  alt="test"
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img
-                  src="https://swiperjs.com/demos/images/nature-7.jpg"
-                  alt="test"
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img
-                  src="https://swiperjs.com/demos/images/nature-8.jpg"
-                  alt="test"
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img
-                  src="https://swiperjs.com/demos/images/nature-9.jpg"
-                  alt="test"
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img
-                  src="https://swiperjs.com/demos/images/nature-10.jpg"
-                  alt="test"
-                />
-              </SwiperSlide>
-            </Swiper>
-          </div>
+            ))}
+          </Swiper>
+
           <Rating point={product.ratingScore.averageRating} />
         </div>
         <div className="ps-shoe__detail">

@@ -14,9 +14,25 @@ import Rating from "../rating"
 import { FreeMode, Navigation, Thumbs } from "swiper";
 import { useDispatch } from "react-redux";
 /* eslint-enable */
-
+/* eslint-disable react/jsx-props-no-spreading */
 function ProductCard({ product }) {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
+
+  const swiperParams = {
+    modules: [FreeMode, Navigation, Thumbs],
+    spaceBetween: 10,
+    thumbs: { swiper: thumbsSwiper },
+  };
+
+  const thumbsParams = {
+    modules: [FreeMode, Navigation, Thumbs],
+    onSwiper: setThumbsSwiper,
+    spaceBetween: 10,
+    slidesPerView: 4,
+    watchSlidesProgress: true,
+    freeMode: true,
+    navigation: true,
+  };
 
   return (
     <div className="ps-shoe mb-30">
@@ -32,13 +48,11 @@ function ProductCard({ product }) {
         </a>
 
         <Swiper
+          {...swiperParams}
           style={{
             "--swiper-navigation-color": "#fff",
             "--swiper-pagination-color": "#fff",
           }}
-          spaceBetween={10}
-          thumbs={{ swiper: thumbsSwiper }}
-          modules={[FreeMode, Navigation, Thumbs]}
           className=""
         >
           {product.images.map((item, index) => (
@@ -56,16 +70,10 @@ function ProductCard({ product }) {
       </div>
       <div className="ps-shoe__content">
         <div className="ps-shoe__variants">
-          <div className="ps-shoe__variant normal">
+          <div className="">
             <Swiper
-              onSwiper={setThumbsSwiper}
-              spaceBetween={10}
-              slidesPerView={4}
-              navigation
-              freeMode
-              watchSlidesProgress
-              modules={[FreeMode, Navigation, Thumbs]}
-              className="mySwiper"
+              {...thumbsParams}
+              className="mySwiper ps-shoe__variant normal"
             >
               <SwiperSlide>
                 <img
@@ -129,14 +137,7 @@ function ProductCard({ product }) {
               </SwiperSlide>
             </Swiper>
           </div>
-          <select className="ps-rating ps-shoe__rating">
-            <option value={1}>1</option>
-            <option value={1}>2</option>
-            <option value={1}>3</option>
-            <option value={1}>4</option>
-            <option value={2}>5</option>
-          </select>
-          <Rating point={4.4} />
+          <Rating point={product.ratingScore.averageRating} />
         </div>
         <div className="ps-shoe__detail">
           <a className="ps-shoe__name" href="#">

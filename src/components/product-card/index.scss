@@ -1,3 +1,27 @@
 .product-card {
   color: red;
 }
+
+.ps-shoe {
+  &__variants {
+    color: yellow;
+    .swiper {
+      .swiper-wrapper {
+        overflow: hidden;
+      }
+      .swiper-button-prev {
+        left: 0;
+      }
+      .swiper-button-next {
+        right: 0;
+      }
+      .swiper-button-prev,
+      .swiper-button-next {
+        &:after {
+          font-size: 15px;
+          color: black;
+        }
+      }
+    }
+  }
+}

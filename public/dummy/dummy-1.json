@@ -39,7 +39,11 @@
       "merchantId": 1,
       "categoryId": 530,
       "categoryName": "green",
-      "filter": ["red"]
+      "filter": ["red"],
+      "in_stock": true,
+      "currency_type": "try",
+
+      "stock": 72
     },
     {
       "id": 2,
@@ -60,7 +64,7 @@
       },
       "url": "test",
       "ratingScore": {
-        "averageRating": 4.3,
+        "averageRating": 3.5,
         "totalCount": 10
       },
       "price": {

@@ -1,0 +1,467 @@
+{
+  "basketitem": [
+    {
+      "quantity": 1,
+      "product": {
+        "pk": 62932,
+        "name": "Bennet Bej Erkek Deri Spor Ayakkabı",
+        "sku": "2010048793003",
+        "base_code": "2010048793",
+        "attributes": {
+          "erp_Model": "A-SLT0231",
+          "erp_OzelKod1": "I",
+          "integration_uretim_yeri": "Türkiye",
+          "erp_RenkAdi": "BEJ-ORANGE-BEYAZ",
+          "integration_Barkod": "8683308255321",
+          "integration_UrunKodu": "2010048793003",
+          "erp_GrupAdi": "Ayakkabı-Erkek-Spor",
+          "erp_MarkaAdi": "DESA",
+          "erp_KategoriAdi": "Ayakkabı",
+          "erp_Barkod": "8683308255321",
+          "erp_SezonKodu": "0001",
+          "erp_ModelKodu": "2010048793",
+          "erp_KategoriKodu": "15",
+          "integration_GrupKodu": "151521128",
+          "filterable_color_1": "Turuncu",
+          "integration_KategoriKodu": "15",
+          "filterable_color_2": "Turuncu",
+          "integration_ModelKodu": "2010048793",
+          "description": "Süet deri&floter deri,bağcıklı,deri iç tabanlı,ultra hafif eva tabanlı erkek spor ayakabı.<br>Taban yüksekliği; 3 cm.",
+          "integration_SezonKodu": "0001",
+          "integration_MarkaKodu": "0001",
+          "erp_SezonAdi": "SS",
+          "erp_CinsiyetKodu": "2",
+          "erp_MarkaKodu": "0001",
+          "badge": "sb",
+          "integration_Model": "A-SLT0231",
+          "erp_RenkKodu": "O37",
+          "erp_KDV": "8",
+          "erp_GrupKodu": "151521128",
+          "integration_KategoriAdi": "Ayakkabı",
+          "integration_CinsiyetKodu": "2",
+          "erp_SezonYil": "2022",
+          "erp_BedenKodu": "42",
+          "integration_KDV": "8",
+          "integration_BedenKodu": "42",
+          "erp_CinsiyetAdi": "Erkek",
+          "integration_OzelKod1": "I",
+          "integration_RenkKodu": "O37",
+          "erp_UrunKodu": "2010048793003",
+          "integration_SezonAdi": "SS",
+          "integration_CinsiyetAdi": "Erkek",
+          "topukboyu": "Orta",
+          "sustainability_product_sku": "2010048793003",
+          "marketplace_description": "Süet deri&floter deri,bağcıklı,deri iç tabanlı,ultra hafif eva tabanlı erkek spor ayakabı.<br>Taban yüksekliği; 3 cm.",
+          "integration_RenkAdi": "BEJ-ORANGE-BEYAZ",
+          "integration_MarkaAdi": "DESA",
+          "erp_uretim_yeri": "Türkiye",
+          "integration_SezonYil": "2022"
+        },
+        "attribute_set": 1,
+        "attributes_kwargs": {
+          "integration_OzelKod1": {
+            "value": "I",
+            "data_type": "dropdown",
+            "label": "I"
+          },
+          "erp_RenkAdi": {
+            "value": "BEJ-ORANGE-BEYAZ",
+            "data_type": "dropdown",
+            "label": "BEJ-ORANGE-BEYAZ"
+          },
+          "integration_RenkKodu": {
+            "value": "O37",
+            "data_type": "dropdown",
+            "label": "Turuncu"
+          },
+          "integration_KategoriAdi": {
+            "value": "Ayakkabı",
+            "data_type": "dropdown",
+            "label": "Ayakkabı"
+          },
+          "erp_GrupAdi": {
+            "value": "Ayakkabı-Erkek-Spor",
+            "data_type": "dropdown",
+            "label": "Ayakkabı-Erkek-Spor"
+          },
+          "erp_MarkaAdi": {
+            "value": "DESA",
+            "data_type": "dropdown",
+            "label": "DESA"
+          },
+          "erp_KategoriAdi": {
+            "value": "Ayakkabı",
+            "data_type": "dropdown",
+            "label": "Ayakkabı"
+          },
+          "integration_MarkaKodu": {
+            "value": "0001",
+            "data_type": "dropdown",
+            "label": "0001"
+          },
+          "erp_MarkaKodu": {
+            "value": "0001",
+            "data_type": "dropdown",
+            "label": "0001"
+          },
+          "erp_OzelKod1": {
+            "value": "I",
+            "data_type": "dropdown",
+            "label": "I"
+          },
+          "integration_RenkAdi": {
+            "value": "BEJ-ORANGE-BEYAZ",
+            "data_type": "dropdown",
+            "label": "Turuncu"
+          },
+          "integration_MarkaAdi": {
+            "value": "DESA",
+            "data_type": "dropdown",
+            "label": "DESA"
+          },
+          "erp_BedenKodu": {
+            "value": "42",
+            "data_type": "dropdown",
+            "label": "42"
+          },
+          "integration_BedenKodu": {
+            "value": "42",
+            "data_type": "dropdown",
+            "label": "42"
+          },
+          "erp_RenkKodu": {
+            "value": "O37",
+            "data_type": "dropdown",
+            "label": "O37"
+          },
+          "filterable_color_1": {
+            "value": "Turuncu",
+            "data_type": "dropdown",
+            "label": "Turuncu"
+          },
+          "erp_CinsiyetAdi": {
+            "value": "Erkek",
+            "data_type": "dropdown",
+            "label": "Erkek"
+          },
+          "integration_CinsiyetAdi": {
+            "value": "Erkek",
+            "data_type": "dropdown",
+            "label": "Erkek"
+          },
+          "filterable_color_2": {
+            "value": "Turuncu",
+            "data_type": "dropdown",
+            "label": "Turuncu"
+          }
+        },
+        "extra_attributes": {},
+        "productimage_set": [
+          {
+            "pk": 215506,
+            "status": "active",
+            "image": "https://cdn-ayae.akinon.net/products/2022/04/12/154444/ce2875ff-fc4d-4f6c-ba12-4ce6deabe505.jpg",
+            "order": 1,
+            "created_date": "2022-04-12T13:53:53.352670Z",
+            "specialimage_set": []
+          },
+          {
+            "pk": 215507,
+            "status": "active",
+            "image": "https://cdn-ayae.akinon.net/products/2022/04/12/154444/88f35850-918f-4e2b-adea-97deb4fcf007.jpg",
+            "order": 2,
+            "created_date": "2022-04-12T13:53:53.499982Z",
+            "specialimage_set": []
+          }
+        ],
+        "price": "899",
+        "in_stock": true,
+        "currency_type": "try",
+        "retail_price": "899",
+        "unit_type": "qty",
+        "absolute_url": "/turuncu-bennet-bej-erkek-deri-spor-ayakkabi-2010048793/",
+        "productvideo_set": [],
+        "product_type": "0",
+        "price_type": "default",
+        "form_schema": null,
+        "is_ready_to_basket": false,
+        "stock": 15,
+        "data_source": null
+      },
+      "unit_price": "899.00",
+      "currency_type": "try",
+      "tax_rate": "8.00",
+      "total_amount": "899.00",
+      "shipping_discount": {
+        "description": "500TL Üzeri Kargo Bedava",
+        "discount": "0.00"
+      },
+      "attributes": {},
+      "id": 3179767,
+      "attributes_kwargs": {},
+      "image": null,
+      "parent": null,
+      "offer_badges": [
+        { "description": "2. 'ye %50 İndirim", "discount": "449.50" },
+        { "description": "500TL Üzeri Kargo Bedava", "discount": "0.00" }
+      ],
+      "price": "899.00",
+      "retail_price": "899.00",
+      "stock": 15,
+      "discount_amount": "449.50"
+    },
+    {
+      "quantity": 1,
+      "product": {
+        "pk": 63766,
+        "name": "Robny Kahve Erkek Deri Evrak Çantası",
+        "sku": "1010034076002",
+        "base_code": "1010034076",
+        "attributes": {
+          "erp_Model": "S9518",
+          "erp_OzelKod1": "I",
+          "integration_uretim_yeri": "Türkiye",
+          "erp_RenkAdi": "KAHVE",
+          "integration_Barkod": "8683308312079",
+          "integration_UrunKodu": "1010034076002",
+          "erp_GrupAdi": "Çanta-Erkek-Evrak",
+          "erp_MarkaAdi": "DESA",
+          "erp_KategoriAdi": "Çanta",
+          "erp_Barkod": "8683308312079",
+          "erp_SezonKodu": "0001",
+          "erp_ModelKodu": "1010034076",
+          "erp_KategoriKodu": "10",
+          "integration_GrupKodu": "101021009",
+          "filterable_color_1": "Kahve",
+          "integration_KategoriKodu": "10",
+          "filterable_color_2": "Kahverengi",
+          "integration_ModelKodu": "1010034076",
+          "description": "Kroko baskılı deriden üretilmiş bu evrak çantası iş yerinde tarzınızı vurgulamanız için birebir.<br>Fermuar kapamalı 2 bölmesi vardır. Biri fermuarlı olmak üzere toplam 3 cebi ve 1 dosyalık iç gözü bulunmaktadır.<br>Sabit el sapının yanı sıra uzunluğu ayarlanabilir ve çıkartılabilir bir omuz askısı da mevcuttur.<br>",
+          "integration_SezonKodu": "0001",
+          "integration_MarkaKodu": "0001",
+          "erp_SezonAdi": "SS",
+          "erp_CinsiyetKodu": "2",
+          "erp_MarkaKodu": "0001",
+          "badge": "ss22",
+          "integration_Model": "S9518",
+          "erp_RenkKodu": "004",
+          "erp_KDV": "8",
+          "erp_GrupKodu": "101021009",
+          "integration_KategoriAdi": "Çanta",
+          "integration_CinsiyetKodu": "2",
+          "erp_SezonYil": "2022",
+          "erp_BedenKodu": "0",
+          "integration_KDV": "8",
+          "integration_BedenKodu": "0",
+          "erp_CinsiyetAdi": "Erkek",
+          "integration_OzelKod1": "I",
+          "integration_RenkKodu": "004",
+          "erp_UrunKodu": "1010034076002",
+          "integration_SezonAdi": "SS",
+          "integration_CinsiyetAdi": "Erkek",
+          "marketplace_description": "Kroko baskılı deriden üretilmiş bu evrak çantası iş yerinde tarzınızı vurgulamanız için birebir.<br>Fermuar kapamalı 2 bölmesi vardır. Biri fermuarlı olmak üzere toplam 3 cebi ve 1 dosyalık iç gözü bulunmaktadır.<br>Sabit el sapının yanı sıra uzunluğu ayarlanabilir ve çıkartılabilir bir omuz askısı da mevcuttur.<br>",
+          "integration_RenkAdi": "KAHVE",
+          "integration_MarkaAdi": "DESA",
+          "erp_uretim_yeri": "Türkiye",
+          "integration_SezonYil": "2022"
+        },
+        "attribute_set": 2,
+        "attributes_kwargs": {
+          "integration_OzelKod1": {
+            "value": "I",
+            "data_type": "dropdown",
+            "label": "I"
+          },
+          "erp_RenkAdi": {
+            "value": "KAHVE",
+            "data_type": "dropdown",
+            "label": "KAHVE"
+          },
+          "integration_RenkKodu": {
+            "value": "004",
+            "data_type": "dropdown",
+            "label": "004"
+          },
+          "integration_KategoriAdi": {
+            "value": "Çanta",
+            "data_type": "dropdown",
+            "label": "Çanta"
+          },
+          "erp_GrupAdi": {
+            "value": "Çanta-Erkek-Evrak",
+            "data_type": "dropdown",
+            "label": "Çanta-Erkek-Evrak"
+          },
+          "erp_MarkaAdi": {
+            "value": "DESA",
+            "data_type": "dropdown",
+            "label": "DESA"
+          },
+          "erp_KategoriAdi": {
+            "value": "Çanta",
+            "data_type": "dropdown",
+            "label": "Çanta"
+          },
+          "integration_MarkaKodu": {
+            "value": "0001",
+            "data_type": "dropdown",
+            "label": "0001"
+          },
+          "erp_MarkaKodu": {
+            "value": "0001",
+            "data_type": "dropdown",
+            "label": "0001"
+          },
+          "erp_OzelKod1": {
+            "value": "I",
+            "data_type": "dropdown",
+            "label": "I"
+          },
+          "integration_RenkAdi": {
+            "value": "KAHVE",
+            "data_type": "dropdown",
+            "label": "Kahve"
+          },
+          "integration_MarkaAdi": {
+            "value": "DESA",
+            "data_type": "dropdown",
+            "label": "DESA"
+          },
+          "erp_BedenKodu": {
+            "value": "0",
+            "data_type": "dropdown",
+            "label": "0"
+          },
+          "integration_BedenKodu": {
+            "value": "0",
+            "data_type": "dropdown",
+            "label": "0"
+          },
+          "erp_RenkKodu": {
+            "value": "004",
+            "data_type": "dropdown",
+            "label": "004"
+          },
+          "filterable_color_1": {
+            "value": "Kahve",
+            "data_type": "dropdown",
+            "label": "Kahve"
+          },
+          "erp_CinsiyetAdi": {
+            "value": "Erkek",
+            "data_type": "dropdown",
+            "label": "Erkek"
+          },
+          "integration_CinsiyetAdi": {
+            "value": "Erkek",
+            "data_type": "dropdown",
+            "label": "Erkek"
+          },
+          "filterable_color_2": {
+            "value": "Kahverengi",
+            "data_type": "dropdown",
+            "label": "Kahverengi"
+          }
+        },
+        "extra_attributes": {},
+        "productimage_set": [
+          {
+            "pk": 216954,
+            "status": "active",
+            "image": "https://cdn-ayae.akinon.net/products/2022/06/01/161621/26e42b22-9d31-4bf4-b777-e54ab782aa3c.jpg",
+            "order": 1,
+            "created_date": "2022-04-28T11:03:55.503439Z",
+            "specialimage_set": []
+          },
+          {
+            "pk": 219102,
+            "status": "active",
+            "image": "https://cdn-ayae.akinon.net/products/2022/06/01/161621/6af7098d-8ddf-4e7f-8936-1c8ad8b07cd0.jpg",
+            "order": 2,
+            "created_date": "2022-06-01T13:07:37.247835Z",
+            "specialimage_set": []
+          },
+          {
+            "pk": 219096,
+            "status": "active",
+            "image": "https://cdn-ayae.akinon.net/products/2022/06/01/161621/491f17b7-cb0b-4427-8283-16cd493c139e.jpg",
+            "order": 3,
+            "created_date": "2022-06-01T13:07:35.447044Z",
+            "specialimage_set": []
+          },
+          {
+            "pk": 219095,
+            "status": "active",
+            "image": "https://cdn-ayae.akinon.net/products/2022/06/01/161621/aae8b6d5-5b23-4627-9a5e-52c477b5bbb2.jpg",
+            "order": 4,
+            "created_date": "2022-06-01T13:07:34.972471Z",
+            "specialimage_set": []
+          },
+          {
+            "pk": 219100,
+            "status": "active",
+            "image": "https://cdn-ayae.akinon.net/products/2022/06/01/161621/d6fc573d-5b6e-4fc5-97df-02f308c3b0b2.jpg",
+            "order": 5,
+            "created_date": "2022-06-01T13:07:36.565013Z",
+            "specialimage_set": []
+          },
+          {
+            "pk": 219135,
+            "status": "active",
+            "image": "https://cdn-ayae.akinon.net/products/2022/06/01/161621/825da5e0-ecb4-4266-8352-af2747e491cc.jpg",
+            "order": 6,
+            "created_date": "2022-06-01T13:08:10.722198Z",
+            "specialimage_set": []
+          },
+          {
+            "pk": 219101,
+            "status": "active",
+            "image": "https://cdn-ayae.akinon.net/products/2022/06/01/161621/892626b0-fb84-4137-9f99-95d69cc454bb.jpg",
+            "order": 7,
+            "created_date": "2022-06-01T13:07:36.829304Z",
+            "specialimage_set": []
+          }
+        ],
+        "price": "3590",
+        "in_stock": true,
+        "currency_type": "try",
+        "retail_price": "3590",
+        "unit_type": "qty",
+        "absolute_url": "/kahve-robny-kahve-erkek-deri-evrak-cantasi-1010034076/",
+        "productvideo_set": [],
+        "product_type": "0",
+        "price_type": "default",
+        "form_schema": null,
+        "is_ready_to_basket": false,
+        "stock": 37,
+        "data_source": null
+      },
+      "unit_price": "3590.00",
+      "currency_type": "try",
+      "tax_rate": "8.00",
+      "total_amount": "3590.00",
+      "shipping_discount": {
+        "description": "500TL Üzeri Kargo Bedava",
+        "discount": "0.00"
+      },
+      "attributes": {},
+      "id": 3113339,
+      "attributes_kwargs": {},
+      "image": null,
+      "parent": null,
+      "offer_badges": [
+        { "description": "2. 'ye %50 İndirim", "discount": "449.50" },
+        { "description": "500TL Üzeri Kargo Bedava", "discount": "0.00" }
+      ],
+      "price": "3590.00",
+      "retail_price": "3590.00",
+      "stock": 37,
+      "discount_amount": "0.00"
+    }
+  ],
+  "total_amount": "4039.50",
+  "total_quantity": 2,
+  "total_discount_amount": "449.50",
+  "total_product_amount": "4489.00",
+  "pk": 1556089
+}

@@ -17,6 +17,7 @@ module.exports = {
       "error",
       {
         endOfLine: "auto",
+        tabWidth: 2,
       },
     ],
     "react/jsx-filename-extension": [1, { extensions: [".js", ".jsx"] }],
@@ -36,21 +37,21 @@ module.exports = {
     "react-hooks/rules-of-hooks": "error", // Checks rules of Hooks
     "react-hooks/exhaustive-deps": "warn", // Checks effect dependencies
     /*   "jsx-a11y/label-has-for": [
-      "error",
-      {
-        required: {
-          some: ["nesting", "id"],
-        },
-      },
-    ],
-
-    "jsx-a11y/control-has-associated-label": [
-      2,
-      {
-        controlComponents: ["CustomButton"],
-        ignoreElements: ["button"],
-      },
-    ], */
+                "error",
+                {
+                  required: {
+                    some: ["nesting", "id"],
+                  },
+                },
+              ],
+          
+              "jsx-a11y/control-has-associated-label": [
+                2,
+                {
+                  controlComponents: ["CustomButton"],
+                  ignoreElements: ["button"],
+                },
+              ], */
   },
   overrides: [
     {

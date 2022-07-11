@@ -1,16 +1,32 @@
 import React from "react";
 
-import Cart from "./cart/Cart";
+import axios from "axios";
+import Cart from "./cart";
 import SearchForm from "./SearchForm";
 import MainMenu from "./MainMenu";
 
 class Header extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      basket: null,
+    };
+  }
+
+  componentDidMount() {
+    axios
+      .get(`${window.location.origin}/dummy/basket.json`)
+      .then((res) => {
+        const basket = res.data;
+        this.setState({
+          basket,
+        });
+      })
+      .catch((err) => console.log("basket data get error"));
   }
 
   render() {
+    const { basket } = this.state;
     return (
       <div>
         <div className="header--sidebar" />
@@ -111,7 +127,7 @@ class Header extends React.Component {
               </div>
               <div className="navigation__column right">
                 <SearchForm />
-                <Cart />
+                <Cart basket={basket} />
                 <div className="menu-toggle">
                   <span />
                 </div>

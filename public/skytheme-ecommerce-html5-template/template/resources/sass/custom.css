@@ -1,0 +1,21 @@
+/* Error: "No operator found in `lg`."
+ *     ,
+ * 279 |   $_: log('No operator found in `#{$expression}`.');
+ *     |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ *     '
+ *   vendor\_media_query.scss 279:7   get-expression-operator()
+ *   vendor\_media_query.scss 369:14  parse-expression()
+ *   vendor\_media_query.scss 557:22  media()
+ *   components\_cart.scss 89:7       @import
+ *   custom.scss 99:9                 root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: \"No operator found in `lg`.\"\a     \2577 \a 279 \2502    $_: log('No operator found in `#{$expression}`.');\d\a     \2502        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\a     \2575 \a   vendor\\_media_query.scss 279:7   get-expression-operator()\a   vendor\\_media_query.scss 369:14  parse-expression()\a   vendor\\_media_query.scss 557:22  media()\a   components\\_cart.scss 89:7       @import\a   custom.scss 99:9                 root stylesheet";
+}

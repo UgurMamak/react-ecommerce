@@ -6,18 +6,31 @@ function Index({ children, data, filters }) {
   const istotopeContainer = useRef(null);
 
   useEffect(() => {
-    const initIsotope = async () => {
-      setIsotope(
-        new Isotope(istotopeContainer.current, {
-          itemSelector: ".grid-item",
-          layoutMode: "fitRows",
-        })
-      );
-    };
-    initIsotope();
+    console.log("setIsotope Effect");
+    imagesLoaded(
+      document.querySelector(".isotope-container"),
+
+      (instance) => {
+        console.log("all images are loaded");
+        document.querySelector(".isotope-container").classList.remove("d-none");
+        setIsotope(
+          new Isotope(istotopeContainer.current, {
+            itemSelector: ".grid-item",
+            layoutMode: "fitRows",
+          })
+        );
+      }
+    );
+    /* setIsotope(
+      new Isotope(istotopeContainer.current, {
+        itemSelector: ".grid-item",
+        layoutMode: "fitRows",
+      })
+    ); */
   }, [data]);
 
   useEffect(() => {
+    console.log("filters Effect");
     if (isotope) {
       const selectedItem = filters.find((x) => x.isChecked === true);
       const selectedValue = selectedItem ? selectedItem.value : "*";
@@ -28,8 +41,18 @@ function Index({ children, data, filters }) {
     }
   }, [filters]);
 
+  useEffect(() => {
+    console.log("component did mount");
+  }, []);
+
+  useEffect(() => {
+    console.log("component did update");
+  }, []);
+
+  if (children.length <= 0) return null;
+
   return (
-    <div ref={istotopeContainer} className="isotope-container">
+    <div ref={istotopeContainer} className="isotope-container d-none">
       {children.map((item, index) => (
         <div className={`grid-item ${data[index].filter[0]}`} key={index}>
           <div className="grid-item__content-wrapper">{item}</div>

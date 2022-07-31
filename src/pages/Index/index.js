@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import ProductCard from "../../components/product-card/ProductCard";
 import IsotopeComp from "../../components/isotope";
+import Loading from "../../components/loading";
 
 function Index(props) {
   const [isotopeData, setIsotopeData] = useState([]);
@@ -49,7 +50,18 @@ function Index(props) {
     );
   };
 
-  if (isotopeData.length === 0) return <div>Loading</div>;
+  const getIsotope = () => {
+    if (isotopeData.length <= 0) return null;
+    return (
+      <IsotopeComp data={isotopeData.products} filters={filters}>
+        {isotopeData.products.map((product, index) => (
+          <ProductCard key={index} product={product} />
+        ))}
+      </IsotopeComp>
+    );
+  };
+
+  if (isotopeData.length <= 0) return <Loading />;
 
   return (
     <div className="ps-main">
@@ -68,13 +80,13 @@ function Index(props) {
                       {f.value === "*"
                         ? isotopeData.products.length
                         : isotopeData.products
-                          .map((product) => {
-                            const b = product.filter.filter(
-                              (x) => x == f.value
-                            ).length;
-                            return b;
-                          })
-                          .reduce((a, b) => a + b, 0)}
+                            .map((product) => {
+                              const b = product.filter.filter(
+                                (x) => x == f.value
+                              ).length;
+                              return b;
+                            })
+                            .reduce((a, b) => a + b, 0)}
                     </sup>
                   </a>
                 </li>
@@ -90,11 +102,7 @@ function Index(props) {
               data-gap={30}
               data-radio="100%"
             >
-              <IsotopeComp data={isotopeData.products} filters={filters}>
-                {isotopeData.products.map((product, index) => (
-                  <ProductCard key={index} product={product} />
-                ))}
-              </IsotopeComp>
+              {getIsotope()}
             </div>
           </div>
         </div>

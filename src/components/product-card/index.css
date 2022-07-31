@@ -1,0 +1,38 @@
+.ps-shoe__variants .swiper,
+.product-card__variants .swiper {
+  height: 20%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px 0;
+}
+
+.ps-shoe__variants .swiper .swiper-slide-thumb-active,
+.product-card__variants .swiper .swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+.ps-shoe__variants .swiper .swiper-slide,
+.product-card__variants .swiper .swiper-slide {
+  width: 25%;
+  height: 100%;
+  opacity: 0.4;
+}
+
+.ps-shoe__variants .swiper .swiper-button-prev,
+.product-card__variants .swiper .swiper-button-prev {
+  left: 0;
+}
+
+.ps-shoe__variants .swiper .swiper-button-next,
+.product-card__variants .swiper .swiper-button-next {
+  right: 0;
+}
+
+.ps-shoe__variants .swiper .swiper-button-prev:after,
+.ps-shoe__variants .swiper .swiper-button-next:after,
+.product-card__variants .swiper .swiper-button-prev:after,
+.product-card__variants .swiper .swiper-button-next:after {
+  font-size: 15px;
+  color: black;
+}
+/*# sourceMappingURL=index.css.map */

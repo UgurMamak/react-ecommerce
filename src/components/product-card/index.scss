@@ -1,5 +1,21 @@
 .ps-shoe,
 .product-card {
+  .ps-shoe__thumbnail {
+    .swiper-slide {
+      position: relative;
+      &::before {
+        padding-top: 100%;
+        content: "";
+        display: block;
+      }
+      figure {
+        margin: 0;
+        position: absolute;
+        top: 0;
+      }
+    }
+  }
+
   &__variants {
     .swiper {
       height: 20%;

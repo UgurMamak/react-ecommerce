@@ -20,7 +20,7 @@ import store from "./redux";
 function AppWithCallbackAfterRender() {
   useEffect(() => {
     /* eslint-disable no-console */
-    console.log("rendered");
+    console.log("Page loaded");
     /* eslint-enable no-console */
 
     /* const assets = [

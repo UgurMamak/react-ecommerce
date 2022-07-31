@@ -27,7 +27,7 @@ class CartItem extends Component {
           </a>
           <p>
             <span>
-              Quantity:<i>{quantity}</i>
+              Adet:<i>{quantity}</i>
             </span>
             <span>
               Toplam Tutar:<i>£{total_amount}</i>

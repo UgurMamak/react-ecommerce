@@ -16,9 +16,7 @@ function Index(props) {
           setIsotopeData(response.data);
           setFilters(response.data.facets);
         })
-        .catch((error) => {
-          console.log("hata", error);
-        });
+        .catch((error) => {});
     };
 
     fetchProductsData();
@@ -28,8 +26,6 @@ function Index(props) {
     event.preventDefault();
     const {
       target: {
-        value,
-        checked,
         dataset: { filter },
       },
     } = event;
@@ -82,7 +78,7 @@ function Index(props) {
                         : isotopeData.products
                             .map((product) => {
                               const b = product.filter.filter(
-                                (x) => x == f.value
+                                (x) => x === f.value
                               ).length;
                               return b;
                             })

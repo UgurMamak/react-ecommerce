@@ -36,6 +36,7 @@ module.exports = {
     "react/no-array-index-key": 0,
     "react-hooks/rules-of-hooks": "error", // Checks rules of Hooks
     "react-hooks/exhaustive-deps": "warn", // Checks effect dependencies
+    "import/no-unresolved": "off",
     /*   "jsx-a11y/label-has-for": [
                 "error",
                 {
@@ -61,4 +62,5 @@ module.exports = {
       },
     },
   ],
+  settings: {},
 };

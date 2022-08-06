@@ -1,23 +1,17 @@
-/* eslint-disable */
-import React, { useState, useEffect, useId } from "react";
+/* eslint-disable react/jsx-props-no-spreading */
+import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import { FreeMode, Navigation, Thumbs } from "swiper";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
-
 import "./index.scss";
 
 import Rating from "../rating";
 
-import { FreeMode, Navigation, Thumbs } from "swiper";
-
-/* eslint-enable */
-/* eslint-disable react/jsx-props-no-spreading */
 function ProductCard({ product }) {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
-
   const swiperParams = {
     modules: [FreeMode, Navigation, Thumbs],
     spaceBetween: 10,

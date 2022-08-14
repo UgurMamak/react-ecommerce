@@ -15,14 +15,14 @@ class Header extends React.Component {
 
   componentDidMount() {
     axios
-      .get(`${window.location.origin}/dummy/basket.json`)
+      .get(`${window.location.origin}/dummy/basket/basket.json`)
       .then((res) => {
         const basket = res.data;
         this.setState({
           basket,
         });
       })
-      .catch((err) => console.log("basket data get error"));
+      .catch((err) => {});
   }
 
   render() {

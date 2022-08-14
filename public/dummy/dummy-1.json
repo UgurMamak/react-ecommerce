@@ -1,12 +1,12 @@
 {
   "status": "success",
-  "title": "Features Products2",
-  "maskTitle": "features2",
+  "title": "Ayakkabılar",
+  "maskTitle": "Ayakkabılar",
   "facets": [
-    { "label": "All deneme", "value": "*", "isChecked": true },
-    { "label": "red deneme", "value": "red", "isChecked": false },
-    { "label": "green", "value": "green", "isChecked": false },
-    { "label": "yellow", "value": "yellow", "isChecked": false }
+    { "label": "All", "value": "*", "isChecked": true },
+    { "label": "Nike", "value": "nike", "isChecked": false },
+    { "label": "Adidas", "value": "adidas", "isChecked": false },
+    { "label": "Puma", "value": "puma", "isChecked": false }
   ],
   "products": [
     {
@@ -39,7 +39,7 @@
       "merchantId": 1,
       "categoryId": 530,
       "categoryName": "green",
-      "filter": ["red"],
+      "filter": ["adidas"],
       "in_stock": true,
       "currency_type": "try",
 
@@ -75,7 +75,7 @@
       "merchantId": 2,
       "categoryId": 530,
       "categoryName": "Ayakkabı",
-      "filter": ["green"]
+      "filter": ["nike"]
     },
     {
       "id": 3,
@@ -107,7 +107,7 @@
       "merchantId": 3,
       "categoryId": 530,
       "categoryName": "Ayakkabı",
-      "filter": ["kids"]
+      "filter": ["puma"]
     },
     {
       "id": 4,
@@ -139,7 +139,7 @@
       "merchantId": 4,
       "categoryId": 530,
       "categoryName": "Ayakkabı",
-      "filter": ["kids"]
+      "filter": ["puma"]
     },
     {
       "id": 5,
@@ -171,7 +171,7 @@
       "merchantId": 1,
       "categoryId": 530,
       "categoryName": "green",
-      "filter": ["red"]
+      "filter": ["nike"]
     }
   ]
 }

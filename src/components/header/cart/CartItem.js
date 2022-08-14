@@ -17,7 +17,11 @@ class CartItem extends Component {
         <div className="ps-cart-item__thumbnail">
           <a href="product-detail.html" aria-label="''" />
           <img
-            src="skytheme-ecommerce-html5-template/template/images/cart-preview/3.jpg"
+            src={
+              product.product_image[0].image
+                ? product.product_image[0].image
+                : "skytheme-ecommerce-html5-template/template/images/cart-preview/3.jpg "
+            }
             alt=""
           />
         </div>

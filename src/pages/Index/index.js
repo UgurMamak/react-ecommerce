@@ -3,6 +3,7 @@ import axios from "axios";
 import ProductCard from "../../components/product-card/ProductCard";
 import IsotopeComp from "../../components/isotope";
 import Loading from "../../components/loading";
+import MainSlider from "../../components/main-slider";
 
 function Index(props) {
   const [isotopeData, setIsotopeData] = useState([]);
@@ -61,6 +62,10 @@ function Index(props) {
 
   return (
     <div className="ps-main">
+      <div>
+        <MainSlider />
+      </div>
+
       <div className="ps-section--features-product ps-section masonry-root pt-100 pb-100">
         <div className="ps-container">
           <div className="ps-section__header mb-50">
@@ -91,7 +96,7 @@ function Index(props) {
           </div>
           <div className="ps-section__content pb-50">
             <div
-              className="ugur-test masonry-wrapper"
+              className="masonry-wrapper"
               data-col-md={4}
               data-col-sm={2}
               data-col-xs={1}

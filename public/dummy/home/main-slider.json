@@ -1,0 +1,34 @@
+{
+  "slider_items": [
+    {
+      "id": 1,
+      "header": "<p>March 2002 <br>Nike SB Dunk Low Pro</p>",
+      "title": "SUBA",
+      "description": "<p>Supa wanted something that was going to rep his East Coast<br>roots and, more specifically, his hometown of <br>New York City in a big way.</p>",
+      "url": "link örnek",
+      "target": false,
+      "desktop_image": "skytheme-ecommerce-html5-template/template/images/slider/3.jpg",
+      "mobile_image": "skytheme-ecommerce-html5-template/template/images/slider/3.jpg"
+    },
+    {
+      "id": 2,
+      "header": "<p>March 2002 <br>Nike SB Dunk Low Pro</p>",
+      "title": "SUBA",
+      "description": "<p>Supa wanted something that was going to rep his East Coast<br>roots and, more specifically, his hometown of <br>New York City in a big way.</p>",
+      "url": "link örnek",
+      "target": false,
+      "desktop_image": "skytheme-ecommerce-html5-template/template/images/slider/3.jpg",
+      "mobile_image": "skytheme-ecommerce-html5-template/template/images/slider/3.jpg"
+    },
+    {
+      "id": 2,
+      "header": "<p>March 2002 <br>Nike SB Dunk Low Pro</p>",
+      "title": "SUBA",
+      "description": "<p>Supa wanted something that was going to rep his East Coast<br>roots and, more specifically, his hometown of <br>New York City in a big way.</p>",
+      "url": "link örnek",
+      "target": false,
+      "desktop_image": "skytheme-ecommerce-html5-template/template/images/slider/3.jpg",
+      "mobile_image": "skytheme-ecommerce-html5-template/template/images/slider/3.jpg"
+    }
+  ]
+}

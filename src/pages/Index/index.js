@@ -8,6 +8,7 @@ import MainSlider from "../../components/main-slider";
 function Index(props) {
   const [isotopeData, setIsotopeData] = useState([]);
   const [filters, setFilters] = useState([]);
+  const [mainSlider, setMainSlider] = useState([]);
 
   useEffect(() => {
     const fetchProductsData = async () => {
@@ -20,7 +21,16 @@ function Index(props) {
         .catch((error) => {});
     };
 
+    const fetchMainSliderData = async () => {
+      await axios
+        .get(`${window.location.origin}/dummy/home/main-slider.json`)
+        .then((response) => {
+          setMainSlider(response.data.slider_items);
+        });
+    };
+
     fetchProductsData();
+    fetchMainSliderData();
   }, []);
 
   const onFilter = (event) => {
@@ -63,7 +73,7 @@ function Index(props) {
   return (
     <div className="ps-main">
       <div>
-        <MainSlider />
+        <MainSlider mainSlider={mainSlider} />
       </div>
 
       <div className="ps-section--features-product ps-section masonry-root pt-100 pb-100">

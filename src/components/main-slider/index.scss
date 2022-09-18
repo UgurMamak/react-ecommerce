@@ -1,9 +1,16 @@
+@use "../../helpers/responsive" as *;
+
 .main-slider {
   &__content {
     position: absolute;
-    top: 50%;
-    left: 28%;
-    transform: translate(-50%, -50%);
+    top: 6%;
+    left: 6%;
+
+    @include responsive(min-lg) {
+      top: 50%;
+      left: 28%;
+      transform: translate(-50%, -50%);
+    }
 
     &__header {
       position: relative;
@@ -19,25 +26,76 @@
       p {
         margin-bottom: 0;
         font-family: "Archivo Narrow", sans-serif;
-        font-size: 24px;
+        font-size: 18px;
         color: #ffffff;
         text-transform: uppercase;
+
+        @include responsive(min-lg) {
+          font-size: 24px;
+        }
       }
     }
     &__title p {
       font-family: "Montserrat", sans-serif;
-      font-size: 72px;
+      font-size: 30px;
       font-weight: 700;
       letter-spacing: 5px;
       color: #fff;
+
+      @include responsive(min-lg) {
+        font-size: 72px;
+      }
     }
     &__description p {
       display: block;
       font-family: Montserrat;
-      font-size: 16px;
+      font-size: 13px;
       line-height: 1.4em;
       text-align: left;
       color: #fff;
+
+      @include responsive(min-lg) {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__link {
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    font-family: "Archivo Narrow", sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #fff;
+    background-color: #2ac37d;
+    line-height: 25px;
+    border: none;
+    border-radius: 60px;
+
+    i {
+      margin-left: 10px;
+      font-size: 14px;
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: calc(100% + 12px);
+      height: calc(100% + 12px);
+      background-color: rgba(#000, 0.07);
+      border-radius: 60px;
+    }
+    &:hover {
+      background-color: #50cf96;
+      color: #fff;
+      &:before {
+        background-color: rgba(#000, 0.1);
+      }
     }
   }
 

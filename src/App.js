@@ -15,6 +15,7 @@ import ReduxStatePage from "./pages/ReduxStatePage";
 import ReduxExample from "./components/redux-example";
 import Test from "./pages/test";
 import "./App.css";
+import "./index.scss";
 
 function App() {
   return (

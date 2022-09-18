@@ -19,7 +19,14 @@ function Index({ mainSlider }) {
       <Swiper {...configSwiper} className="main-slider">
         {mainSlider.map((item, index) => (
           <SwiperSlide key={index}>
-            <img className="img-fluid" src={item.desktop_image} alt="" />
+            <picture>
+              <source media="(min-width:650px)" srcSet={item.desktop_image} />
+              <img
+                src={item.mobile_image}
+                alt="Flowers"
+                style={{ width: "auto" }}
+              />
+            </picture>
             <div className="main-slider__content">
               <div
                 className="tp-caption main-slider__content__header"
@@ -36,7 +43,7 @@ function Index({ mainSlider }) {
                 id="layer211"
                 dangerouslySetInnerHTML={createMarkup(item.description)}
               />
-              <a className="tp-caption ps-btn" id="layer31" href={item.url}>
+              <a className="main-slider__link" id="layer31" href={item.url}>
                 Satın Al
                 <i className="ps-icon-next" />
               </a>

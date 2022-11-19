@@ -1,0 +1,37 @@
+.rating-wrapper {
+  .ratings-content {
+    display: flex;
+  }
+
+  .rating-item {
+    position: relative;
+    .empty,
+    .full {
+      &:before {
+        content: "";
+        display: inline-block;
+        width: 13px;
+        height: 13px;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    }
+
+    .empty {
+      &:before {
+        background-image: url("https://cdn.dsmcdn.com/web/production/rating-and-review-small-star-grey.svg");
+      }
+    }
+
+    .full {
+      position: absolute;
+      left: 0;
+      top: 0;
+      overflow: hidden;
+      width: 0%;
+      &:before {
+        background-image: url("https://cdn.dsmcdn.com/web/production/rating-and-review-small-star-orange.svg");
+      }
+    }
+  }
+}

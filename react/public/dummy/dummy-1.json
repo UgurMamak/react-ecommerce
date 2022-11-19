@@ -1,0 +1,177 @@
+{
+  "status": "success",
+  "title": "Ayakkabılar",
+  "maskTitle": "Ayakkabılar",
+  "facets": [
+    { "label": "All", "value": "*", "isChecked": true },
+    { "label": "Nike", "value": "nike", "isChecked": false },
+    { "label": "Adidas", "value": "adidas", "isChecked": false },
+    { "label": "Puma", "value": "puma", "isChecked": false }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Air Jordan 7 Retro",
+      "images": [
+        "https://swiperjs.com/demos/images/nature-1.jpg",
+        "https://swiperjs.com/demos/images/nature-2.jpg",
+        "https://swiperjs.com/demos/images/nature-3.jpg",
+        "https://swiperjs.com/demos/images/nature-4.jpg",
+        "https://swiperjs.com/demos/images/nature-5.jpg",
+        "https://swiperjs.com/demos/images/nature-6.jpg",
+        "https://swiperjs.com/demos/images/nature-7.jpg"
+      ],
+      "imagesAlt": "test",
+      "brand": {
+        "id": 1,
+        "name": "Nike"
+      },
+      "url": "test",
+      "ratingScore": {
+        "averageRating": 4.3,
+        "totalCount": 10
+      },
+      "price": {
+        "oldPrice": 100,
+        "newPrice": 86.6
+      },
+      "freeCargo": true,
+      "merchantId": 1,
+      "categoryId": 530,
+      "categoryName": "green",
+      "filter": ["adidas"],
+      "in_stock": true,
+      "currency_type": "try",
+
+      "stock": 72
+    },
+    {
+      "id": 2,
+      "name": "Air Jordan 7 Retro",
+      "images": [
+        "https://swiperjs.com/demos/images/nature-1.jpg",
+        "https://swiperjs.com/demos/images/nature-2.jpg",
+        "https://swiperjs.com/demos/images/nature-3.jpg",
+        "https://swiperjs.com/demos/images/nature-4.jpg",
+        "https://swiperjs.com/demos/images/nature-5.jpg",
+        "https://swiperjs.com/demos/images/nature-6.jpg",
+        "https://swiperjs.com/demos/images/nature-7.jpg"
+      ],
+      "imagesAlt": "test",
+      "brand": {
+        "id": 2,
+        "name": "Nike"
+      },
+      "url": "test",
+      "ratingScore": {
+        "averageRating": 3.5,
+        "totalCount": 10
+      },
+      "price": {
+        "oldPrice": 100,
+        "newPrice": 86.6
+      },
+      "freeCargo": true,
+      "merchantId": 2,
+      "categoryId": 530,
+      "categoryName": "Ayakkabı",
+      "filter": ["nike"]
+    },
+    {
+      "id": 3,
+      "name": "Air Jordan 7 Retro",
+      "images": [
+        "https://swiperjs.com/demos/images/nature-1.jpg",
+        "https://swiperjs.com/demos/images/nature-2.jpg",
+        "https://swiperjs.com/demos/images/nature-3.jpg",
+        "https://swiperjs.com/demos/images/nature-4.jpg",
+        "https://swiperjs.com/demos/images/nature-5.jpg",
+        "https://swiperjs.com/demos/images/nature-6.jpg",
+        "https://swiperjs.com/demos/images/nature-7.jpg"
+      ],
+      "imagesAlt": "test",
+      "brand": {
+        "id": 3,
+        "name": "Nike"
+      },
+      "url": "test",
+      "ratingScore": {
+        "averageRating": 4.3,
+        "totalCount": 10
+      },
+      "price": {
+        "oldPrice": 100,
+        "newPrice": 86.6
+      },
+      "freeCargo": true,
+      "merchantId": 3,
+      "categoryId": 530,
+      "categoryName": "Ayakkabı",
+      "filter": ["puma"]
+    },
+    {
+      "id": 4,
+      "name": "Air Jordan 7 Retro",
+      "images": [
+        "https://swiperjs.com/demos/images/nature-1.jpg",
+        "https://swiperjs.com/demos/images/nature-2.jpg",
+        "https://swiperjs.com/demos/images/nature-3.jpg",
+        "https://swiperjs.com/demos/images/nature-4.jpg",
+        "https://swiperjs.com/demos/images/nature-5.jpg",
+        "https://swiperjs.com/demos/images/nature-6.jpg",
+        "https://swiperjs.com/demos/images/nature-7.jpg"
+      ],
+      "imagesAlt": "test",
+      "brand": {
+        "id": 4,
+        "name": "Nike"
+      },
+      "url": "test",
+      "ratingScore": {
+        "averageRating": 4.3,
+        "totalCount": 10
+      },
+      "price": {
+        "oldPrice": 100,
+        "newPrice": 86.6
+      },
+      "freeCargo": true,
+      "merchantId": 4,
+      "categoryId": 530,
+      "categoryName": "Ayakkabı",
+      "filter": ["puma"]
+    },
+    {
+      "id": 5,
+      "name": "Air Jordan 7 Retro",
+      "images": [
+        "https://swiperjs.com/demos/images/nature-1.jpg",
+        "https://swiperjs.com/demos/images/nature-2.jpg",
+        "https://swiperjs.com/demos/images/nature-3.jpg",
+        "https://swiperjs.com/demos/images/nature-4.jpg",
+        "https://swiperjs.com/demos/images/nature-5.jpg",
+        "https://swiperjs.com/demos/images/nature-6.jpg",
+        "https://swiperjs.com/demos/images/nature-7.jpg"
+      ],
+      "imagesAlt": "test",
+      "brand": {
+        "id": 1,
+        "name": "Nike"
+      },
+      "url": "test",
+      "ratingScore": {
+        "averageRating": 4.3,
+        "totalCount": 10
+      },
+      "price": {
+        "oldPrice": 100,
+        "newPrice": 86.6
+      },
+      "freeCargo": true,
+      "merchantId": 1,
+      "categoryId": 530,
+      "categoryName": "green",
+      "filter": ["nike"]
+    }
+  ]
+}

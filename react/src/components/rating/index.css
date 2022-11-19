@@ -1,0 +1,36 @@
+.rating-wrapper .ratings-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.rating-wrapper .rating-item {
+  position: relative;
+}
+
+.rating-wrapper .rating-item .empty:before,
+.rating-wrapper .rating-item .full:before {
+  content: "";
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.rating-wrapper .rating-item .empty:before {
+  background-image: url("https://cdn.dsmcdn.com/web/production/rating-and-review-small-star-grey.svg");
+}
+
+.rating-wrapper .rating-item .full {
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  width: 0%;
+}
+
+.rating-wrapper .rating-item .full:before {
+  background-image: url("https://cdn.dsmcdn.com/web/production/rating-and-review-small-star-orange.svg");
+}
+/*# sourceMappingURL=index.css.map */

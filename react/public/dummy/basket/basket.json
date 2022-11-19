@@ -1,0 +1,159 @@
+{
+  "basketitem": [
+    {
+      "quantity": 1,
+      "product": {
+        "pk": 62932,
+        "name": "Bennet Bej Erkek Deri Spor Ayakkabı",
+        "sku": "2010048793003",
+        "base_code": "2010048793",
+        "attributes": {},
+        "attribute_set": 1,
+        "extra_attributes": {},
+        "product_image": [
+          {
+            "pk": 215506,
+            "status": "active",
+            "image": "https://cdn-ayae.akinon.net/products/2022/04/12/154444/ce2875ff-fc4d-4f6c-ba12-4ce6deabe505.jpg",
+            "order": 1
+          },
+          {
+            "pk": 215507,
+            "status": "active",
+            "image": "https://cdn-ayae.akinon.net/products/2022/04/12/154444/88f35850-918f-4e2b-adea-97deb4fcf007.jpg",
+            "order": 2
+          }
+        ],
+        "price": "899",
+        "in_stock": true,
+        "currency_type": "try",
+        "retail_price": "899",
+        "unit_type": "qty",
+        "absolute_url": "/turuncu-bennet-bej-erkek-deri-spor-ayakkabi-2010048793/",
+        "productvideo_set": [],
+        "product_type": "0",
+        "price_type": "default",
+        "form_schema": null,
+        "is_ready_to_basket": false,
+        "stock": 15,
+        "data_source": null
+      },
+      "unit_price": "899.00",
+      "currency_type": "try",
+      "tax_rate": "8.00",
+      "total_amount": "899.00",
+      "shipping_discount": {
+        "description": "500TL Üzeri Kargo Bedava",
+        "discount": "0.00"
+      },
+      "attributes": {},
+      "id": 3179767,
+      "attributes_kwargs": {},
+      "image": null,
+      "parent": null,
+      "offer_badges": [
+        { "description": "2. 'ye %50 İndirim", "discount": "449.50" },
+        { "description": "500TL Üzeri Kargo Bedava", "discount": "0.00" }
+      ],
+      "price": "899.00",
+      "retail_price": "899.00",
+      "stock": 15,
+      "discount_amount": "449.50"
+    },
+    {
+      "quantity": 1,
+      "product": {
+        "pk": 63766,
+        "name": "Robny Kahve Erkek Deri Evrak Çantası",
+        "sku": "1010034076002",
+        "base_code": "1010034076",
+        "attributes": {},
+        "attribute_set": 2,
+        "extra_attributes": {},
+        "product_image": [
+          {
+            "pk": 216954,
+            "status": "active",
+            "image": "https://cdn-ayae.akinon.net/products/2022/06/01/161621/26e42b22-9d31-4bf4-b777-e54ab782aa3c.jpg",
+            "order": 1
+          },
+          {
+            "pk": 219102,
+            "status": "active",
+            "image": "https://cdn-ayae.akinon.net/products/2022/06/01/161621/6af7098d-8ddf-4e7f-8936-1c8ad8b07cd0.jpg",
+            "order": 2
+          },
+          {
+            "pk": 219096,
+            "status": "active",
+            "image": "https://cdn-ayae.akinon.net/products/2022/06/01/161621/491f17b7-cb0b-4427-8283-16cd493c139e.jpg",
+            "order": 3
+          },
+          {
+            "pk": 219095,
+            "status": "active",
+            "image": "https://cdn-ayae.akinon.net/products/2022/06/01/161621/aae8b6d5-5b23-4627-9a5e-52c477b5bbb2.jpg",
+            "order": 4
+          },
+          {
+            "pk": 219100,
+            "status": "active",
+            "image": "https://cdn-ayae.akinon.net/products/2022/06/01/161621/d6fc573d-5b6e-4fc5-97df-02f308c3b0b2.jpg",
+            "order": 5
+          },
+          {
+            "pk": 219135,
+            "status": "active",
+            "image": "https://cdn-ayae.akinon.net/products/2022/06/01/161621/825da5e0-ecb4-4266-8352-af2747e491cc.jpg",
+            "order": 6
+          },
+          {
+            "pk": 219101,
+            "status": "active",
+            "image": "https://cdn-ayae.akinon.net/products/2022/06/01/161621/892626b0-fb84-4137-9f99-95d69cc454bb.jpg",
+            "order": 7
+          }
+        ],
+        "price": "3590",
+        "in_stock": true,
+        "currency_type": "try",
+        "retail_price": "3590",
+        "unit_type": "qty",
+        "absolute_url": "/kahve-robny-kahve-erkek-deri-evrak-cantasi-1010034076/",
+        "productvideo_set": [],
+        "product_type": "0",
+        "price_type": "default",
+        "form_schema": null,
+        "is_ready_to_basket": false,
+        "stock": 37,
+        "data_source": null
+      },
+      "unit_price": "3590.00",
+      "currency_type": "try",
+      "tax_rate": "8.00",
+      "total_amount": "3590.00",
+      "shipping_discount": {
+        "description": "500TL Üzeri Kargo Bedava",
+        "discount": "0.00"
+      },
+      "attributes": {},
+      "id": 3113339,
+      "attributes_kwargs": {},
+      "image": null,
+      "parent": null,
+      "offer_badges": [
+        { "description": "2. 'ye %50 İndirim", "discount": "449.50" },
+        { "description": "500TL Üzeri Kargo Bedava", "discount": "0.00" }
+      ],
+      "price": "3590.00",
+      "retail_price": "3590.00",
+      "stock": 37,
+      "discount_amount": "0.00"
+    }
+  ],
+  "total_amount": "4039.50",
+  "total_quantity": 2,
+  "total_discount_amount": "449.50",
+  "total_product_amount": "4489.00",
+  "pk": 1556089
+}

@@ -1,0 +1,30 @@
+.loading {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  z-index: 999;
+  transition: ease all 0.3s;
+
+  &:after {
+    position: fixed;
+    z-index: 1000000;
+    content: "";
+    top: 50%;
+    left: 50%;
+    width: 60px;
+    height: 60px;
+    margin: -20px 0 0 -20px;
+    border: 8px solid #2ac37d;
+    border-bottom-color: #219962;
+    border-radius: 50%;
+    animation: animLoader 0.8s linear infinite forwards;
+  }
+}
+@keyframes animLoader {
+  to {
+    transform: rotate(360deg);
+  }
+}

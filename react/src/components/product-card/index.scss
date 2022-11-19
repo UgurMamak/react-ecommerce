@@ -1,0 +1,48 @@
+.ps-shoe,
+.product-card {
+  .ps-shoe__thumbnail {
+    .swiper-slide {
+      position: relative;
+      &::before {
+        padding-top: 100%;
+        content: "";
+        display: block;
+      }
+      figure {
+        margin: 0;
+        position: absolute;
+        top: 0;
+      }
+    }
+  }
+
+  &__variants {
+    .swiper {
+      height: 20%;
+      box-sizing: border-box;
+      padding: 10px 0;
+
+      .swiper-slide-thumb-active {
+        opacity: 1;
+      }
+      .swiper-slide {
+        width: 25%;
+        height: 100%;
+        opacity: 0.4;
+      }
+      .swiper-button-prev {
+        left: 0;
+      }
+      .swiper-button-next {
+        right: 0;
+      }
+      .swiper-button-prev,
+      .swiper-button-next {
+        &:after {
+          font-size: 15px;
+          color: black;
+        }
+      }
+    }
+  }
+}

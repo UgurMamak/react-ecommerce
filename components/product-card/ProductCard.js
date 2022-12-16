@@ -1,11 +1,12 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import React, { useState } from "react";
+import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Navigation, Thumbs } from "swiper";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
+import Image from 'next/image';
 
 import Rating from "../rating";
 
@@ -70,7 +71,7 @@ function ProductCard({ product }) {
             <Swiper {...thumbsParams} className="ps-shoe__variant normal">
               {product.images.map((item, index) => (
                 <SwiperSlide key={index}>
-                  <img src={item} alt="" />
+                  <Image src={item} width={63} height={63} alt=""/>
                 </SwiperSlide>
               ))}
             </Swiper>

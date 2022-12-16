@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 import Layout from '../components/layout/main'
 import MainSlider from "../components/main-slider";
@@ -9,7 +9,7 @@ import Loading from "../components/loading";
 import dynamic from "next/dynamic";
 import ProductCard from "../components/product-card/ProductCard";
 
-const  IsotopeComp = dynamic(() => import("../components/isotope"), { ssr: false });
+const IsotopeComp = dynamic(() => import("../components/isotope"), { ssr: false });
 
 export default function Home() {
   const [mainSlider, setMainSlider] = useState([]);
@@ -88,7 +88,6 @@ export default function Home() {
 
       <div className="ps-main">
         <MainSlider mainSlider={mainSlider} />
-
         <div className="ps-section--features-product ps-section masonry-root pt-100 pb-100">
           <div className="ps-container">
             <div className="ps-section__header mb-50">
@@ -131,9 +130,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-
-
-
       </div>
 
       <main className={styles.main}>
